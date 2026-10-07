@@ -1,480 +1,1263 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>وبسایت حقوقی عمار</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
-    margin:0;
-    font-family:Tahoma;
-    background:#0b0f2f;
-    color:white;
-	direction: rtl;
-}
+    <title>شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار</title>
 
-header{
-    text-align:center;
-    padding:30px;
-    border-bottom:2px solid #d4af37;
-}
+    <meta name="description"
+        content="شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار - ارائه خدمات حقوقی، تجاری و مالیاتی">
 
-header img{
-    width:120px;
-}
 
-header h1{
-    color:#d4af37;
-}
+    <style>
 
-nav{
-    background:#1a237e;
-    text-align:center;
-}
+        /* =========================
+           تنظیمات عمومی
+        ========================== */
 
-nav a{
-    color:white;
-    text-decoration:none;
-    display:inline-block;
-    padding:15px;
-    font-weight:bold;
-}
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-nav a:hover{
-    background:#d4af37;
-    color:#0b0f2f;
-}
+        body {
+            margin: 0;
+            font-family: "B Nazanin", "BNazanin", Tahoma, sans-serif;
+            background: linear-gradient(135deg, #070b25, #0b0f2f, #10164a);
+            color: #ffffff;
+            direction: rtl;
+            font-size: 20px;
+            line-height: 1.8;
+        }
 
-section{
-    max-width:900px;
-    margin:auto;
-    padding:30px;
-}
+        a {
+            color: inherit;
+        }
 
-h2{
-    color:#d4af37;
-    border-bottom:2px solid #d4af37;
-    padding-bottom:10px;
-}
 
-p{
-    text-align:justify;
-    line-height:1.9;
-}
+        /* =========================
+           هدر
+        ========================== */
 
-.services li{
-    margin:10px 0;
-}
+        header {
+            text-align: center;
+            padding: 45px 20px 35px;
+            background: linear-gradient(180deg, #080c2b, #0b0f2f);
+            border-bottom: 2px solid #d4af37;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        }
 
-.lawyer{
-    background:#11154a;
-    border:1px solid #d4af37;
-    border-radius:10px;
-    padding:20px;
-    margin:20px 0;
-    text-align:center;
-}
+        header img {
+            width: 125px;
+            height: 125px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
 
-.lawyer img{
-    width:200px;
-    border-radius:10px;
-    border:2px solid #d4af37;
-}
+        header h1 {
+            color: #d4af37;
+            font-size: 42px;
+            margin: 5px 0 10px;
+            font-weight: bold;
+        }
 
-.pdf-box{
-    background:#11154a;
-    margin:15px 0;
-    padding:15px;
-    border-radius:8px;
-}
+        header h2 {
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
 
-.pdf-options{
-    margin-top:10px;
-}
 
-.pdf-options a{
-    background:#d4af37;
-    color:#0b0f2f;
-    padding:8px 12px;
-    margin:5px;
-    display:inline-block;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-}
+        /* =========================
+           منوی اصلی
+        ========================== */
 
-.clickable{
-    cursor:pointer;
-}
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(26, 35, 126, 0.97);
+            text-align: center;
+            border-bottom: 1px solid #d4af37;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+        }
 
-footer{
-    text-align:center;
-    padding:15px;
-    border-top:2px solid #d4af37;
-    color:#d4af37;
-}
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 13px 20px;
+            font-weight: bold;
+            font-size: 19px;
+            transition: 0.3s;
+        }
 
-</style>
+        nav a:hover {
+            background: #d4af37;
+            color: #0b0f2f;
+        }
 
-<script>
 
-function copyText(text){
+        /* =========================
+           بخش‌های سایت
+        ========================== */
 
-    navigator.clipboard.writeText(text);
+        section {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 35px;
+            background: rgba(17, 21, 74, 0.55);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
 
-    alert("کپی شد: " + text);
+        h2 {
+            color: #d4af37;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 30px;
+        }
 
-}
+        p {
+            text-align: justify;
+            line-height: 2;
+        }
 
-</script>
+
+        /* =========================
+           خدمات
+        ========================== */
+
+        .services {
+            padding-right: 25px;
+        }
+
+        .services li {
+            margin: 12px 0;
+            padding: 8px 12px;
+            transition: 0.3s;
+        }
+
+        .services li:hover {
+            color: #d4af37;
+            transform: translateX(-5px);
+        }
+
+
+        /* =========================
+           کارت وکلا
+        ========================== */
+
+        .lawyer {
+            background: linear-gradient(145deg, #11154a, #0d1240);
+            border: 1px solid #d4af37;
+            border-radius: 15px;
+            padding: 30px 25px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
+        }
+
+        .lawyer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .lawyer img {
+            width: 200px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #d4af37;
+            display: block;
+            margin: 0 auto 18px;
+        }
+
+        .lawyer h3 {
+            color: #ffffff;
+            font-size: 27px;
+            margin: 10px 0 15px;
+        }
+
+        .lawyer p {
+            text-align: center;
+            margin: 5px 0;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PDF ها
+        ========================== */
+
+        .pdf-box {
+            background: linear-gradient(145deg, #11154a, #0c113b);
+            margin: 18px 0;
+            padding: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .pdf-box:hover {
+            border-color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        .pdf-options {
+            margin-top: 12px;
+        }
+
+        .pdf-options a {
+            background: #d4af37;
+            color: #0b0f2f;
+            padding: 8px 18px;
+            margin: 3px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .pdf-options a:hover {
+            background: #ffffff;
+            color: #0b0f2f;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           بخش تماس
+        ========================== */
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 14px 0;
+            padding: 12px 15px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item a:hover {
+            color: #d4af37;
+        }
+
+
+        /* آیکون تماس */
+
+        .contact-icon {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            display: inline-block;
+            object-fit: contain;
+        }
+
+
+        /* آیکون تلفن */
+
+        .phone-icon {
+            width: 28px;
+            height: 28px;
+            color: #d4af37;
+        }
+
+
+        /* آیکون ایمیل */
+
+        .email-icon {
+            width: 29px;
+            height: 29px;
+            color: #d4af37;
+        }
+
+
+        /* دکمه کپی */
+
+        .copy-button {
+            background: transparent;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-family: inherit;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .copy-button:hover {
+            background: #d4af37;
+            color: #0b0f2f;
+        }
+
+
+        /* =========================
+           فوتر
+        ========================== */
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+            border-top: 2px solid #d4af37;
+            color: #d4af37;
+            background: #080c29;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           موبایل
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            body {
+                font-size: 18px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header img {
+                width: 100px;
+                height: 100px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 17px;
+            }
+
+            section {
+                margin: 20px 10px;
+                padding: 22px 17px;
+                border-radius: 14px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .lawyer {
+                padding: 25px 15px;
+            }
+
+            .lawyer img {
+                width: 180px;
+                height: 235px;
+            }
+
+            .lawyer h3 {
+                font-size: 24px;
+            }
+
+            .contact-item {
+                flex-wrap: wrap;
+            }
+
+            .contact-item a {
+                min-width: 0;
+            }
+
+        }
+
+
+        /* =========================
+           موبایل خیلی کوچک
+        ========================== */
+
+        @media (max-width: 450px) {
+
+            nav a {
+                display: block;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header h2 {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 20px 14px;
+            }
+
+            .lawyer img {
+                width: 160px;
+                height: 210px;
+            }
+
+            .contact-item {
+                font-size: 17px;
+            }
+
+            .contact-icon {
+                width: 27px;
+                height: 27px;
+            }
+
+        }
+
+    </style>
+
+
+    <script>
+
+        /* =========================
+           سیستم کپی
+        ========================== */
+
+        function copyText(text) {
+
+            if (navigator.clipboard && window.isSecureContext) {
+
+                navigator.clipboard.writeText(text)
+                    .then(function () {
+                        alert("کپی شد: " + text);
+                    })
+                    .catch(function () {
+                        fallbackCopy(text);
+                    });
+
+            } else {
+
+                fallbackCopy(text);
+
+            }
+
+        }
+
+
+        function fallbackCopy(text) {
+
+            const textarea = document.createElement("textarea");
+
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+
+            document.body.appendChild(textarea);
+
+            textarea.select();
+
+            try {
+
+                document.execCommand("copy");
+
+                alert("کپی شد: " + text);
+
+            } catch (error) {
+
+                alert("امکان کپی خودکار وجود ندارد.");
+
+            }
+
+            document.body.removeChild(textarea);
+
+        }
+
+    </script>
 
 </head>
 
+
 <body>
 
-<header>
 
-<img src="logo.png">
+    <!-- =========================
+         هدر
+    ========================== -->
 
-<h1>وبسایت حقوقی عمّار</h1>
+    <header>
 
-<h2>مشاوره حقوقی،تجاری،مالیاتی مطمئن برای شما</h2>
+        <img
+            src="logo.png"
+            alt="لوگوی شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار"
+        >
 
-</header>
+        <h1>
+            شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
+        </h1>
 
-<nav>
+        <h2>
+            مشاوره حقوقی، تجاری، مالیاتی مطمئن برای شما
+        </h2>
 
-<a href="#about">درباره ما</a>
+    </header>
 
-<a href="#services">خدمات</a>
 
-<a href="#team">وکلا</a>
+    <!-- =========================
+         منو
+    ========================== -->
 
-<a href="#laws">قوانین افغانستان</a>
+    <nav>
 
-<a href="#contact">تماس با ما</a>
+        <a href="#about">
+            درباره ما
+        </a>
 
-</nav>
+        <a href="#services">
+            خدمات
+        </a>
 
-<section id="about">
+        <a href="#team">
+            وکلا
+        </a>
 
-<h2>درباره ما</h2>
+        <a href="#laws">
+            قوانین افغانستان
+        </a>
 
-<p>
+        <a href="#contact">
+            تماس با ما
+        </a>
 
-«شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار» یک مجموعه تخصصی در زمینه ارائه
- خدمات حقوقی و مشاوره حقوقی، تجاری و مالیاتی است. ما با تجربه گسترده در حمایت از کسب‌وکارها و افراد، آماده‌ایم تا مسیر حقوقی شما را با دقت و شفافیت هدایت کنیم.
+    </nav>
 
 
-<br><br>
+    <!-- =========================
+         درباره ما
+    ========================== -->
 
-هدف ما ارائه مشاوره‌های  قابل اعتماد، تهیه و بررسی قراردادها و حل اختلافات حقوقی، تجاری و مالیاتی است.
+    <section id="about">
 
-<br><br>
+        <h2>
+            درباره ما
+        </h2>
 
-تیم ما با تمرکز بر شفافیت، مسئولیت‌پذیری و تخصص، تلاش می‌کند بهترین راهکارهای حقوقی را برای موفقیت شما ارائه دهد.
+        <p>
 
-</p>
+            «شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار» یک مجموعه تخصصی در زمینه ارائه
+            خدمات حقوقی و مشاوره حقوقی، تجاری و مالیاتی است. ما با تجربه گسترده در
+            حمایت از کسب‌وکارها و افراد، آماده‌ایم تا مسیر حقوقی شما را با دقت و
+            شفافیت هدایت کنیم.
 
-</section>
+            <br><br>
 
-<section id="services">
+            هدف ما ارائه مشاوره‌های قابل اعتماد، تهیه و بررسی قراردادها و حل
+            اختلافات حقوقی، تجاری و مالیاتی است.
 
-<h2>خدمات ما</h2>
+            <br><br>
 
-<ul class="services">
+            تیم ما با تمرکز بر شفافیت، مسئولیت‌پذیری و تخصص، تلاش می‌کند بهترین
+            راهکارهای حقوقی را برای موفقیت شما ارائه دهد.
 
-<li>مشاوره حقوقی، تجاری و مالیاتی</li>
+        </p>
 
-<li>تهیه و بررسی قراردادها</li>
+    </section>
 
-<li>حل و فصل اختلافات حقوقی و تجاری</li>
 
-<li>ارائه راهکارهای قانونی برای کسب‌وکارها</li>
+    <!-- =========================
+         خدمات
+    ========================== -->
 
-</ul>
+    <section id="services">
 
-</section>
+        <h2>
+            خدمات ما
+        </h2>
 
-<section id="team">
+        <ul class="services">
 
-<h2>تیم وکلا</h2>
+            <li>
+                مشاوره حقوقی، تجاری و مالیاتی
+            </li>
 
-<div class="lawyer">
+            <li>
+                تهیه و بررسی قراردادها
+            </li>
 
-<img src="heydarpour.jpg">
+            <li>
+                حل و فصل اختلافات حقوقی و تجاری
+            </li>
 
-<h3>دکتر مهدی حیدرپور</h3>
+            <li>
+                ارائه راهکارهای قانونی برای کسب‌وکارها
+            </li>
 
-<p>
+            <li>
+                حکمیت
+            </li>
 
-<li>موقف: رئیس شرکت</li>
-<li>تحصیلات: دکترای حقوق جزا و جرم‌شناسی</li>
-<li>سوابق: بیش از 12 سال تدریس در دانشگاه های داخلی و بین‌المللی در سطح لیسانس و ماستری</li>
+            <li>
+                سازش، میانجیگری و مذاکره
+            </li>
 
-</p>
+            <li>
+                مساعی جمیله
+            </li>
 
-</div>
+        </ul>
 
-<div class="lawyer">
+    </section>
 
-<img src="yousefi.jpg">
 
-<h3>ماستر روح‌الله یوسفی</h3>
+    <!-- =========================
+         تیم وکلا
+    ========================== -->
 
-<p>
+    <section id="team">
 
-<li>موقف: معاون شرکت</li>
-<li>تحصیلات: ماستری حقوق خصوصی</li>
-<li>سوابق: بیش از 10 سال وکالت</li>
+        <h2>
+            تیم وکلا
+        </h2>
 
-</p>
 
-</div>
+        <!-- دکتر مهدی حیدرپور -->
 
-<div class="lawyer">
-
-<img src="qatali.jpg">
-
-<h3>فوق لیسانس سید اشرف قتالی</h3>
-
-<p>
-
-<li>موقف: وکیل شرکت</li>
-<li>تحصیلات: فوق لیسانس حقوق جزا</li>
-<li>سوابق: بیش از 8 سال وکالت</li>
-
-</p>
-
-</div>
-
-</section>
-
-<section id="laws">
-
-<h2>قوانین افغانستان</h2>
-
-<div class="pdf-box">
-📄 رسمی جریده فوقالعاده کنه
-<div class="pdf-options">
-<a href="ghanon1.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:31
-<div class="pdf-options">
-<a href="ghanon2.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:15
-<div class="pdf-options">
-<a href="ghanon3.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:33
-<div class="pdf-options">
-<a href="ghanon4.pdf" download>Download</a>
-</div>
-</div>
-<div class="pdf-box">
-📄 شماره متحدالمال:25
-<div class="pdf-options">
-<a href="ghanon5.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄د متحدالمال کنه:36
-<div class="pdf-options">
-<a href="ghanon6.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄شماره متحدالمال:38
-<div class="pdf-options">
-<a href="ghanon7.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄د متحدالمال کنه:11
-<div class="pdf-options">
-<a href="ghanon8.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:35
-<div class="pdf-options">
-<a href="ghanon9.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:40
-<div class="pdf-options">
-<a href="ghanon10.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:40
-<div class="pdf-options">
-<a href="ghanon11.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:18
-<div class="pdf-options">
-<a href="ghanon12.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:15
-<div class="pdf-options">
-<a href="ghanon13.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د اختری منتخبی مسئلی
-<div class="pdf-options">
-<a href="ghanon14.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 متحدالمال نمبر:24
-<div class="pdf-options">
-<a href="ghanon15.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:16
-<div class="pdf-options">
-<a href="ghanon16.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:7
-<div class="pdf-options">
-<a href="ghanon17.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 دارالافتاء مدرسه دارالعلوم اسلامیه
-<div class="pdf-options">
-<a href="ghanon18.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:49
-<div class="pdf-options">
-<a href="ghanon19.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:30
-<div class="pdf-options">
-<a href="ghanon20.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 رسمی جریده
-<div class="pdf-options">
-<a href="ghanon21.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 شماره متحدالمال:19
-<div class="pdf-options">
-<a href="ghanon22.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د متحدالمال کنه:24
-<div class="pdf-options">
-<a href="ghanon23.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 اصولنامه جزایی محاکم
-<div class="pdf-options">
-<a href="ghanon24.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه:18
-<div class="pdf-options">
-<a href="ghanon25.pdf" download>Download</a>
-</div>
-</div>
-
-<div class="pdf-box">
-📄 مجموعه_متحدالمآل_های_بابت_سال_۱۴۴۶_هــ_ق
-<div class="pdf-options">
-<a href="ghanon25.pdf" download>Download</a>
-</div>
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>تماس با ما</h2>
-
-<p>
-برای دریافت مشاوره حقوقی،تجاری،مالیاتی و ارتباط با شرکت عمار، می‌توانید از طریق اطلاعات زیر با ما در تماس باشید.
-</p>
-
-<p>
-آدرس: هرات، افغانستان
-</p>
-
-<p class="clickable" onclick="copyText('0709940040')">
-شماره تماس: ۰۷۰۹۹۴۰۰۴۰ 📋
-</p>
-<p class="clickable" onclick="copyText('0709940040')">
-واتساپ: ۰۷۰۹۹۴۰۰۴۰ 📋
-</p>
-
-<p class="clickable" onclick="copyText('0709940040')">
-تلگرام: ۰۷۰۹۹۴۰۰۴۰ 📋
-</p>
-
-<p class="clickable" onclick="copyText('ammarcopany@gmail.com')">
-ایمیل: ammarcompany@gmail.com 📋
-</p>
-
-</section>
-
-<footer>
-
-© عمار
-
-</footer>
+        <div class="lawyer">
+
+            <img
+                src="heydarpour.jpg"
+                alt="دکتر مهدی حیدرپور"
+            >
+
+            <h3>
+                دکتر مهدی حیدرپور
+            </h3>
+
+            <p>
+                موقف: رئیس شرکت
+            </p>
+
+            <p>
+                تحصیلات: دکترای حقوق جزا و جرم‌شناسی
+            </p>
+
+            <p>
+                سوابق: بیش از 12 سال تدریس در دانشگاه‌های داخلی و بین‌المللی
+                در سطح لیسانس و ماستری
+            </p>
+
+        </div>
+
+
+        <!-- ماستر روح‌الله یوسفی -->
+
+        <div class="lawyer">
+
+            <img
+                src="yousefi.jpg"
+                alt="ماستر روح‌الله یوسفی"
+            >
+
+            <h3>
+                ماستر روح‌الله یوسفی
+            </h3>
+
+            <p>
+                موقف: معاون شرکت
+            </p>
+
+            <p>
+                تحصیلات: ماستری حقوق خصوصی
+            </p>
+
+            <p>
+                سوابق: بیش از 10 سال وکالت
+            </p>
+
+        </div>
+
+
+        <!-- سید اشرف قتالی -->
+
+        <div class="lawyer">
+
+            <img
+                src="qatali.jpg"
+                alt="سید اشرف قتالی"
+            >
+
+            <h3>
+                سید اشرف قتالی
+            </h3>
+
+            <p>
+                موقف: وکیل شرکت
+            </p>
+
+            <p>
+                تحصیلات: فوق لیسانس حقوق جزا
+            </p>
+
+            <p>
+                سوابق: بیش از 8 سال وکالت
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         قوانین افغانستان
+    ========================== -->
+
+    <section id="laws">
+
+        <h2>
+            قوانین افغانستان
+        </h2>
+
+
+        <div class="pdf-box">
+
+            📄 رسمی جریده فوق‌العاده کنه
+
+            <div class="pdf-options">
+                <a href="ghanon1.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 31
+
+            <div class="pdf-options">
+                <a href="ghanon2.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 15
+
+            <div class="pdf-options">
+                <a href="ghanon3.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 33
+
+            <div class="pdf-options">
+                <a href="ghanon4.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 25
+
+            <div class="pdf-options">
+                <a href="ghanon5.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 36
+
+            <div class="pdf-options">
+                <a href="ghanon6.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 38
+
+            <div class="pdf-options">
+                <a href="ghanon7.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 11
+
+            <div class="pdf-options">
+                <a href="ghanon8.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 35
+
+            <div class="pdf-options">
+                <a href="ghanon9.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 40
+
+            <div class="pdf-options">
+                <a href="ghanon10.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 40
+
+            <div class="pdf-options">
+                <a href="ghanon11.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 18
+
+            <div class="pdf-options">
+                <a href="ghanon12.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 15
+
+            <div class="pdf-options">
+                <a href="ghanon13.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د اختری منتخبی مسئلی
+
+            <div class="pdf-options">
+                <a href="ghanon14.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 متحدالمال نمبر: 24
+
+            <div class="pdf-options">
+                <a href="ghanon15.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 16
+
+            <div class="pdf-options">
+                <a href="ghanon16.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 7
+
+            <div class="pdf-options">
+                <a href="ghanon17.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 دارالافتاء مدرسه دارالعلوم اسلامیه
+
+            <div class="pdf-options">
+                <a href="ghanon18.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 49
+
+            <div class="pdf-options">
+                <a href="ghanon19.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 30
+
+            <div class="pdf-options">
+                <a href="ghanon20.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 رسمی جریده
+
+            <div class="pdf-options">
+                <a href="ghanon21.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 شماره متحدالمال: 19
+
+            <div class="pdf-options">
+                <a href="ghanon22.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د متحدالمال کنه: 24
+
+            <div class="pdf-options">
+                <a href="ghanon23.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 اصولنامه جزایی محاکم
+
+            <div class="pdf-options">
+                <a href="ghanon24.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه: 18
+
+            <div class="pdf-options">
+                <a href="ghanon25.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="pdf-box">
+
+            📄 مجموعه متحدالمال‌های بابت سال ۱۴۴۶ هـ ق
+
+            <div class="pdf-options">
+                <a href="ghanon26.pdf" download>
+                    دانلود
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         تماس با ما
+    ========================== -->
+
+    <section id="contact">
+
+        <h2>
+            تماس با ما
+        </h2>
+
+        <p>
+
+            برای دریافت مشاوره حقوقی، تجاری، مالیاتی و ارتباط با شرکت عمّار،
+            می‌توانید از طریق اطلاعات زیر با ما در تماس باشید.
+
+        </p>
+
+        <p>
+            آدرس: هرات، افغانستان
+        </p>
+
+
+        <!-- شماره تماس -->
+
+        <div class="contact-item">
+
+            <a href="tel:0709940040">
+
+                <svg class="contact-icon phone-icon"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                        d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.94C17.55 15.31 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.69 6.45 9.06 7.57C9.17 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
+                        fill="currentColor">
+                    </path>
+
+                </svg>
+
+                شماره تماس: ۰۷۰۹۹۴۰۰۴۰
+
+            </a>
+
+            <button
+                class="copy-button"
+                onclick="copyText('0709940040')">
+
+                📋 کپی
+
+            </button>
+
+        </div>
+
+
+        <!-- واتساپ -->
+
+        <div class="contact-item">
+
+            <a
+                href="https://wa.me/93709940040"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                    class="contact-icon"
+                    src="https://cdn.simpleicons.org/whatsapp/25D366"
+                    alt="WhatsApp">
+
+                واتساپ: ۰۷۰۹۹۴۰۰۴۰
+
+            </a>
+
+            <button
+                class="copy-button"
+                onclick="copyText('0709940040')">
+
+                📋 کپی
+
+            </button>
+
+        </div>
+
+
+        <!-- تلگرام -->
+
+        <div class="contact-item">
+
+            <a
+                href="https://t.me/0709940040"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                    class="contact-icon"
+                    src="https://cdn.simpleicons.org/telegram/229ED9"
+                    alt="Telegram">
+
+                تلگرام: ۰۷۰۹۹۴۰۰۴۰
+
+            </a>
+
+            <button
+                class="copy-button"
+                onclick="copyText('0709940040')">
+
+                📋 کپی
+
+            </button>
+
+        </div>
+
+
+        <!-- ایمیل -->
+
+        <div class="contact-item">
+
+            <a href="mailto:ammarcompany@gmail.com">
+
+                <svg class="contact-icon email-icon"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"
+                        stroke="currentColor"
+                        stroke-width="2">
+                    </rect>
+
+                    <path
+                        d="M3 7L12 13L21 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+
+                </svg>
+
+                ایمیل: ammarcompany@gmail.com
+
+            </a>
+
+            <button
+                class="copy-button"
+                onclick="copyText('ammarcompany@gmail.com')">
+
+                📋 کپی
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         فوتر
+    ========================== -->
+
+    <footer>
+
+        © شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
+
+    </footer>
+
 
 </body>
 
