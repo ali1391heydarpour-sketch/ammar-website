@@ -1,1264 +1,1457 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار</title>
-
-    <meta name="description"
-        content="شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار - ارائه خدمات حقوقی، تجاری و مالیاتی">
-
-
-    <style>
-
-        /* =========================
-           تنظیمات عمومی
-        ========================== */
-
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: "B Nazanin", "BNazanin", Tahoma, sans-serif;
-            background: linear-gradient(135deg, #070b25, #0b0f2f, #10164a);
-            color: #ffffff;
-            direction: rtl;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-
-        a {
-            color: inherit;
-        }
-
-
-        /* =========================
-           هدر
-        ========================== */
-
-        header {
-            text-align: center;
-            padding: 45px 20px 35px;
-            background: linear-gradient(180deg, #080c2b, #0b0f2f);
-            border-bottom: 2px solid #d4af37;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-        }
-
-        header img {
-            width: 125px;
-            height: 125px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-
-        header h1 {
-            color: #d4af37;
-            font-size: 42px;
-            margin: 5px 0 10px;
-            font-weight: bold;
-        }
-
-        header h2 {
-            border: none;
-            color: #ffffff;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            font-weight: normal;
-        }
-
-
-        /* =========================
-           منوی اصلی
-        ========================== */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(26, 35, 126, 0.97);
-            text-align: center;
-            border-bottom: 1px solid #d4af37;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            display: inline-block;
-            padding: 13px 20px;
-            font-weight: bold;
-            font-size: 19px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #d4af37;
-            color: #0b0f2f;
-        }
-
-
-        /* =========================
-           بخش‌های سایت
-        ========================== */
-
-        section {
-            max-width: 1000px;
-            margin: 35px auto;
-            padding: 35px;
-            background: rgba(17, 21, 74, 0.55);
-            border: 1px solid rgba(212, 175, 55, 0.45);
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            color: #d4af37;
-            border-bottom: 2px solid #d4af37;
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 30px;
-        }
-
-        p {
-            text-align: justify;
-            line-height: 2;
-        }
-
-
-        /* =========================
-           خدمات
-        ========================== */
-
-        .services {
-            padding-right: 25px;
-        }
-
-        .services li {
-            margin: 12px 0;
-            padding: 8px 12px;
-            transition: 0.3s;
-        }
-
-        .services li:hover {
-            color: #d4af37;
-            transform: translateX(-5px);
-        }
-
-
-        /* =========================
-           کارت وکلا
-        ========================== */
-
-        .lawyer {
-            background: linear-gradient(145deg, #11154a, #0d1240);
-            border: 1px solid #d4af37;
-            border-radius: 15px;
-            padding: 30px 25px;
-            margin: 25px 0;
-            text-align: center;
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
-            transition: 0.3s;
-        }
-
-        .lawyer:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .lawyer img {
-            width: 200px;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 2px solid #d4af37;
-            display: block;
-            margin: 0 auto 18px;
-        }
-
-        .lawyer h3 {
-            color: #ffffff;
-            font-size: 27px;
-            margin: 10px 0 15px;
-        }
-
-        .lawyer p {
-            text-align: center;
-            margin: 5px 0;
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           PDF ها
-        ========================== */
-
-        .pdf-box {
-            background: linear-gradient(145deg, #11154a, #0c113b);
-            margin: 18px 0;
-            padding: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.5);
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .pdf-box:hover {
-            border-color: #d4af37;
-            transform: translateY(-2px);
-        }
-
-        .pdf-options {
-            margin-top: 12px;
-        }
-
-        .pdf-options a {
-            background: #d4af37;
-            color: #0b0f2f;
-            padding: 8px 18px;
-            margin: 3px;
-            display: inline-block;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .pdf-options a:hover {
-            background: #ffffff;
-            color: #0b0f2f;
-            transform: scale(1.04);
-        }
-
-
-        /* =========================
-           بخش تماس
-        ========================== */
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 14px 0;
-            padding: 12px 15px;
-            border: 1px solid transparent;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .contact-item:hover {
-            border-color: #d4af37;
-            background: rgba(212, 175, 55, 0.08);
-        }
-
-        .contact-item a {
-            color: #ffffff;
-            text-decoration: none;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .contact-item a:hover {
-            color: #d4af37;
-        }
-
-
-        /* آیکون تماس */
-
-        .contact-icon {
-            width: 30px;
-            height: 30px;
-            flex-shrink: 0;
-            display: inline-block;
-            object-fit: contain;
-        }
-
-
-        /* آیکون تلفن */
-
-        .phone-icon {
-            width: 28px;
-            height: 28px;
-            color: #d4af37;
-        }
-
-
-        /* آیکون ایمیل */
-
-        .email-icon {
-            width: 29px;
-            height: 29px;
-            color: #d4af37;
-        }
-
-
-        /* دکمه کپی */
-
-        .copy-button {
-            background: transparent;
-            color: #d4af37;
-            border: 1px solid #d4af37;
-            border-radius: 6px;
-            padding: 4px 10px;
-            font-family: inherit;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .copy-button:hover {
-            background: #d4af37;
-            color: #0b0f2f;
-        }
-
-
-        /* =========================
-           فوتر
-        ========================== */
-
-        footer {
-            text-align: center;
-            padding: 25px 15px;
-            margin-top: 40px;
-            border-top: 2px solid #d4af37;
-            color: #d4af37;
-            background: #080c29;
-            font-size: 18px;
-        }
-
-
-        /* =========================
-           موبایل
-        ========================== */
-
-        @media (max-width: 768px) {
-
-            body {
-                font-size: 18px;
-            }
-
-            header {
-                padding: 30px 15px;
-            }
-
-            header img {
-                width: 100px;
-                height: 100px;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
-
-            header h2 {
-                font-size: 20px;
-            }
-
-            nav {
-                position: relative;
-            }
-
-            nav a {
-                padding: 10px 12px;
-                font-size: 17px;
-            }
-
-            section {
-                margin: 20px 10px;
-                padding: 22px 17px;
-                border-radius: 14px;
-            }
-
-            h2 {
-                font-size: 26px;
-            }
-
-            .lawyer {
-                padding: 25px 15px;
-            }
-
-            .lawyer img {
-                width: 180px;
-                height: 235px;
-            }
-
-            .lawyer h3 {
-                font-size: 24px;
-            }
-
-            .contact-item {
-                flex-wrap: wrap;
-            }
-
-            .contact-item a {
-                min-width: 0;
-            }
-
-        }
-
-
-        /* =========================
-           موبایل خیلی کوچک
-        ========================== */
-
-        @media (max-width: 450px) {
-
-            nav a {
-                display: block;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            }
-
-            header h1 {
-                font-size: 28px;
-            }
-
-            header h2 {
-                font-size: 18px;
-            }
-
-            section {
-                padding: 20px 14px;
-            }
-
-            .lawyer img {
-                width: 160px;
-                height: 210px;
-            }
-
-            .contact-item {
-                font-size: 17px;
-            }
-
-            .contact-icon {
-                width: 27px;
-                height: 27px;
-            }
-
-        }
-
-    </style>
-
-
-    <script>
-
-        /* =========================
-           سیستم کپی
-        ========================== */
-
-        function copyText(text) {
-
-            if (navigator.clipboard && window.isSecureContext) {
-
-                navigator.clipboard.writeText(text)
-                    .then(function () {
-                        alert("کپی شد: " + text);
-                    })
-                    .catch(function () {
-                        fallbackCopy(text);
-                    });
-
-            } else {
-
-                fallbackCopy(text);
-
-            }
-
-        }
-
-
-        function fallbackCopy(text) {
-
-            const textarea = document.createElement("textarea");
-
-            textarea.value = text;
-            textarea.style.position = "fixed";
-            textarea.style.opacity = "0";
-
-            document.body.appendChild(textarea);
-
-            textarea.select();
-
-            try {
-
-                document.execCommand("copy");
-
-                alert("کپی شد: " + text);
-
-            } catch (error) {
-
-                alert("امکان کپی خودکار وجود ندارد.");
-
-            }
-
-            document.body.removeChild(textarea);
-
-        }
-
-    </script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "B Nazanin", "BNazanin", Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #0b0f2f, #071b52, #06133d);
+    color: white;
+    line-height: 2;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(90deg, #101747, #152b72, #101747);
+    border-bottom: 3px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    min-height: 95px;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.site-title {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section {
+    padding: 85px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 55px;
+    font-weight: bold;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 135px;
+    height: 4px;
+    background: #d4af37;
+    margin: 20px auto 0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-logo {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 35px;
+}
+
+.hero h1 {
+    color: #d4af37;
+    font-size: 46px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 13px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #f0d875;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(8, 18, 60, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 18px;
+    padding: 45px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.about-box p {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 22px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    min-height: 185px;
+    padding: 30px;
+    background: linear-gradient(135deg, #111b4b, #17265e);
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #d4af37;
+    font-size: 21px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   LAWYERS
+========================= */
+
+.lawyers-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.lawyer-card {
+    background: #101a48;
+    border: 1px solid rgba(212,175,55,0.75);
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lawyer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    border-color: #d4af37;
+}
+
+.lawyer-photo {
+    width: 100%;
+    height: 500px;
+    background: #101a48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.lawyer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* فقط تنظیم عکس دکتر مهدی حیدرپور */
+
+.lawyer-photo img.heydarpour-photo {
+    object-position: center 8%;
+}
+
+.lawyer-name {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* =========================
+   LAWYER MODAL
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,0.82);
+    overflow-y: auto;
+    padding: 40px 15px;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: min(950px, 100%);
+    background: linear-gradient(135deg, #0d1745, #101e58);
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #111;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 5;
+}
+
+/* فقط اصلاح نمایش عکس کنار مشخصات */
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.modal-photo {
+    width: 350px;
+    height: 430px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #101a48;
+}
+
+.modal-info {
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+}
+
+.modal-name {
+    color: #d4af37;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-details {
+    color: white;
+    font-size: 19px;
+    line-height: 2.2;
+}
+
+.modal-details p {
+    margin: 8px 0;
+}
+
+/* =========================
+   LAWS / PDF
+========================= */
+
+.laws-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pdf-card {
+    background: linear-gradient(135deg, #10194a, #17255b);
+    border: 1px solid rgba(212,175,55,0.7);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.pdf-title {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.download-btn {
+    flex-shrink: 0;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.download-btn:hover {
+    background: #f0d875;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    max-width: 850px;
+    margin: auto;
+    background: rgba(8,18,60,0.88);
+    border: 1px solid rgba(212,175,55,0.75);
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.address {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-item {
+    display: grid;
+    grid-template-columns: 55px 1fr auto;
+    align-items: center;
+    gap: 15px;
+    min-height: 70px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.contact-text {
+    min-width: 0;
+    text-align: right;
+}
+
+.contact-label {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-value {
+    color: white;
+    font-size: 18px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #d4af37;
+}
+
+.copy-btn {
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #d4af37;
+    padding: 8px 17px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+/* SVG PHONE */
+.phone-svg {
+    width: 42px;
+    height: 42px;
+    display: block;
+    margin: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 3px solid #d4af37;
+    background: #070c27;
+    text-align: center;
+    padding: 35px 20px;
+    color: #d4af37;
+    font-size: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .site-title {
+        white-space: normal;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .services-grid,
+    .lawyers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lawyer-photo {
+        height: 430px;
+    }
+
+    .modal-body {
+        gap: 25px;
+    }
+
+    .modal-photo {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding-top: 55px;
+    }
+
+    .hero-logo {
+        width: 190px;
+        height: 190px;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .services-grid,
+    .lawyers-grid,
+    .laws-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 160px;
+        font-size: 19px;
+    }
+
+    .lawyer-photo {
+        height: 470px;
+    }
+
+    .about-box {
+        padding: 25px;
+    }
+
+    .about-box p {
+        font-size: 17px;
+    }
+
+    .contact-box {
+        padding: 25px 18px;
+    }
+
+    .contact-item {
+        grid-template-columns: 48px 1fr;
+        gap: 10px;
+    }
+
+    .contact-item .copy-btn {
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin-top: 5px;
+    }
+
+    .contact-text {
+        text-align: right;
+    }
+
+    .contact-value {
+        font-size: 16px;
+    }
+
+    .modal {
+        padding: 20px 10px;
+    }
+
+    .modal-content {
+        padding: 25px 15px;
+    }
+
+    /* در موبایل عکس کنار متن باقی می‌ماند ولی اندازه مناسب می‌شود */
+
+    .modal-body {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .modal-photo {
+        width: 42%;
+        height: 300px;
+    }
+
+    .modal-info {
+        width: 58%;
+    }
+
+    .modal-name {
+        font-size: 22px;
+        line-height: 1.7;
+    }
+
+    .modal-details {
+        font-size: 15px;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .navbar {
+        padding: 15px 12px;
+    }
+
+    .site-title {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-logo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .lawyer-photo {
+        height: 400px;
+    }
+
+    .lawyer-name {
+        font-size: 19px;
+    }
+
+    .pdf-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pdf-title {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .contact-intro {
+        font-size: 17px;
+    }
+
+    .address {
+        font-size: 17px;
+    }
+
+    .modal-body {
+        gap: 10px;
+    }
+
+    .modal-photo {
+        width: 40%;
+        height: 260px;
+    }
+
+    .modal-info {
+        width: 60%;
+    }
+
+    .modal-name {
+        font-size: 19px;
+    }
+
+    .modal-details {
+        font-size: 14px;
+    }
+
+    .modal-details p {
+        margin: 5px 0;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-    <!-- =========================
-         هدر
-    ========================== -->
+<header>
+    <nav class="navbar">
 
-    <header>
-
-        <img
-            src="logo.png"
-            alt="لوگوی شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار"
-        >
-
-        <h1>
+        <div class="site-title">
             شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
-        </h1>
+        </div>
 
-        <h2>
-            مشاوره حقوقی، تجاری، مالیاتی مطمئن برای شما
-        </h2>
-
-    </header>
-
-
-    <!-- =========================
-         منو
-    ========================== -->
-
-    <nav>
-
-        <a href="#about">
-            درباره ما
-        </a>
-
-        <a href="#services">
-            خدمات
-        </a>
-
-        <a href="#team">
-            وکلا
-        </a>
-
-        <a href="#laws">
-            قوانین افغانستان
-        </a>
-
-        <a href="#contact">
-            تماس با ما
-        </a>
+        <div class="nav-links">
+            <a href="#about">درباره ما</a>
+            <a href="#services">خدمات</a>
+            <a href="#lawyers">وکلا</a>
+            <a href="#laws">قوانین افغانستان</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
 
     </nav>
+</header>
 
 
-    <!-- =========================
-         درباره ما
-    ========================== -->
+<!-- =========================
+     HERO
+========================= -->
 
-    <section id="about">
+<section class="hero">
 
-        <h2>
-            درباره ما
-        </h2>
+    <img
+        src="logo.png"
+        alt="لوگوی شرکت مشاوره حقوقی عمّار"
+        class="hero-logo"
+    >
+
+    <h1>
+        شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
+    </h1>
+
+    <p>
+        مشاوره حقوقی، تجاری، مالیاتی مطمئن برای شما
+    </p>
+
+    <a href="#contact" class="hero-btn">
+        تماس با ما
+    </a>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        درباره ما
+    </h2>
+
+    <div class="about-box">
 
         <p>
-
-            «شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار» یک مجموعه تخصصی در زمینه ارائه
-            خدمات حقوقی و مشاوره حقوقی، تجاری و مالیاتی است. ما با تجربه گسترده در
-            حمایت از کسب‌وکارها و افراد، آماده‌ایم تا مسیر حقوقی شما را با دقت و
-            شفافیت هدایت کنیم.
-
-            <br><br>
-
-            هدف ما ارائه مشاوره‌های قابل اعتماد، تهیه و بررسی قراردادها و حل
-            اختلافات حقوقی، تجاری و مالیاتی است.
-
-            <br><br>
-
-            تیم ما با تمرکز بر شفافیت، مسئولیت‌پذیری و تخصص، تلاش می‌کند بهترین
-            راهکارهای حقوقی را برای موفقیت شما ارائه دهد.
-
+            شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار با هدف ارائه خدمات
+            تخصصی حقوقی، تجاری و مالیاتی فعالیت می‌نماید.
         </p>
 
-    </section>
-
-
-    <!-- =========================
-         خدمات
-    ========================== -->
-
-    <section id="services">
-
-        <h2>
-            خدمات ما
-        </h2>
-
-        <ul class="services">
-
-            <li>
-                مشاوره حقوقی، تجاری و مالیاتی
-            </li>
-
-            <li>
-                تهیه و بررسی قراردادها
-            </li>
-
-            <li>
-                حل و فصل اختلافات حقوقی و تجاری
-            </li>
-
-            <li>
-                ارائه راهکارهای قانونی برای کسب‌وکارها
-            </li>
-
-            <li>
-                حکمیت
-            </li>
-
-            <li>
-                سازش، میانجیگری و مذاکره
-            </li>
-
-            <li>
-                مساعی جمیله
-            </li>
-
-        </ul>
-
-    </section>
-
-
-    <!-- =========================
-         تیم وکلا
-    ========================== -->
-
-    <section id="team">
-
-        <h2>
-            تیم وکلا
-        </h2>
-
-
-        <!-- دکتر مهدی حیدرپور -->
-
-        <div class="lawyer">
-
-            <img
-                src="heydarpour.jpg"
-                alt="دکتر مهدی حیدرپور"
-            >
-
-            <h3>
-                دکتر مهدی حیدرپور
-            </h3>
-
-            <p>
-                موقف: رئیس شرکت
-            </p>
-
-            <p>
-                تحصیلات: دکترای حقوق جزا و جرم‌شناسی
-            </p>
-
-            <p>
-                سوابق: بیش از 12 سال تدریس در دانشگاه‌های داخلی و بین‌المللی
-                در سطح لیسانس و ماستری
-            </p>
-
-        </div>
-
-
-        <!-- ماستر روح‌الله یوسفی -->
-
-        <div class="lawyer">
-
-            <img
-                src="yousefi.jpg"
-                alt="ماستر روح‌الله یوسفی"
-            >
-
-            <h3>
-                ماستر روح‌الله یوسفی
-            </h3>
-
-            <p>
-                موقف: معاون شرکت
-            </p>
-
-            <p>
-                تحصیلات: ماستری حقوق خصوصی
-            </p>
-
-            <p>
-                سوابق: بیش از 10 سال وکالت
-            </p>
-
-        </div>
-
-
-        <!-- سید اشرف قتالی -->
-
-        <div class="lawyer">
-
-            <img
-                src="qatali.jpg"
-                alt="سید اشرف قتالی"
-            >
-
-            <h3>
-                سید اشرف قتالی
-            </h3>
-
-            <p>
-                موقف: وکیل شرکت
-            </p>
-
-            <p>
-                تحصیلات: فوق لیسانس حقوق جزا
-            </p>
-
-            <p>
-                سوابق: بیش از 8 سال وکالت
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         قوانین افغانستان
-    ========================== -->
-
-    <section id="laws">
-
-        <h2>
-            قوانین افغانستان
-        </h2>
-
-
-        <div class="pdf-box">
-
-            📄 رسمی جریده فوق‌العاده کنه
-
-            <div class="pdf-options">
-                <a href="ghanon1.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 31
-
-            <div class="pdf-options">
-                <a href="ghanon2.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 15
-
-            <div class="pdf-options">
-                <a href="ghanon3.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 33
-
-            <div class="pdf-options">
-                <a href="ghanon4.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 25
-
-            <div class="pdf-options">
-                <a href="ghanon5.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 36
-
-            <div class="pdf-options">
-                <a href="ghanon6.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 38
-
-            <div class="pdf-options">
-                <a href="ghanon7.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 11
-
-            <div class="pdf-options">
-                <a href="ghanon8.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 35
-
-            <div class="pdf-options">
-                <a href="ghanon9.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 40
-
-            <div class="pdf-options">
-                <a href="ghanon10.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 40
-
-            <div class="pdf-options">
-                <a href="ghanon11.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 18
-
-            <div class="pdf-options">
-                <a href="ghanon12.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 15
-
-            <div class="pdf-options">
-                <a href="ghanon13.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د اختری منتخبی مسئلی
-
-            <div class="pdf-options">
-                <a href="ghanon14.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 متحدالمال نمبر: 24
-
-            <div class="pdf-options">
-                <a href="ghanon15.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 16
-
-            <div class="pdf-options">
-                <a href="ghanon16.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 7
-
-            <div class="pdf-options">
-                <a href="ghanon17.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 دارالافتاء مدرسه دارالعلوم اسلامیه
-
-            <div class="pdf-options">
-                <a href="ghanon18.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 49
-
-            <div class="pdf-options">
-                <a href="ghanon19.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 30
-
-            <div class="pdf-options">
-                <a href="ghanon20.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 رسمی جریده
-
-            <div class="pdf-options">
-                <a href="ghanon21.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 شماره متحدالمال: 19
-
-            <div class="pdf-options">
-                <a href="ghanon22.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د متحدالمال کنه: 24
-
-            <div class="pdf-options">
-                <a href="ghanon23.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 اصولنامه جزایی محاکم
-
-            <div class="pdf-options">
-                <a href="ghanon24.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه: 18
-
-            <div class="pdf-options">
-                <a href="ghanon25.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="pdf-box">
-
-            📄 مجموعه متحدالمال‌های بابت سال ۱۴۴۶ هـ ق
-
-            <div class="pdf-options">
-                <a href="ghanon26.pdf" download>
-                    دانلود
-                </a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         تماس با ما
-    ========================== -->
-
-    <section id="contact">
-
-        <h2>
-            تماس با ما
-        </h2>
+        <p>
+            این شرکت با بهره‌گیری از دانش و تجربه متخصصان و وکلای مجرب،
+            تلاش می‌کند راهکارهای مناسب و قانونی را برای اشخاص، شرکت‌ها
+            و کسب‌وکارها ارائه نماید.
+        </p>
 
         <p>
+            خدمات ما شامل مشاوره حقوقی، تجاری و مالیاتی، تهیه و بررسی
+            قراردادها، حل و فصل اختلافات، حکمیت، سازش، میانجیگری،
+            مذاکره و مساعی جمیله می‌باشد.
+        </p>
 
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <h2 class="section-title">
+        خدمات
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            مشاوره حقوقی، تجاری و مالیاتی
+        </div>
+
+        <div class="service-card">
+            تهیه و بررسی قراردادها
+        </div>
+
+        <div class="service-card">
+            حل و فصل اختلافات حقوقی و تجاری
+        </div>
+
+        <div class="service-card">
+            ارائه راهکارهای قانونی برای کسب‌وکارها
+        </div>
+
+        <div class="service-card">
+            حکمیت
+        </div>
+
+        <div class="service-card">
+            سازش، میانجیگری و مذاکره
+        </div>
+
+        <div class="service-card">
+            مساعی جمیله
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LAWYERS
+========================= -->
+
+<section id="lawyers">
+
+    <h2 class="section-title">
+        وکلا
+    </h2>
+
+    <div class="lawyers-grid">
+
+        <div
+            class="lawyer-card"
+            onclick="openLawyer('heydarpour')"
+        >
+
+            <div class="lawyer-photo">
+                <img
+                    src="heydarpour.jpg"
+                    alt="دکتر مهدی حیدرپور"
+                    class="heydarpour-photo"
+                >
+            </div>
+
+            <div class="lawyer-name">
+                دکتر مهدی حیدرپور
+            </div>
+
+        </div>
+
+
+        <div
+            class="lawyer-card"
+            onclick="openLawyer('yousefi')"
+        >
+
+            <div class="lawyer-photo">
+                <img
+                    src="yousefi.jpg"
+                    alt="ماستر روح‌الله یوسفی"
+                >
+            </div>
+
+            <div class="lawyer-name">
+                ماستر روح‌الله یوسفی
+            </div>
+
+        </div>
+
+
+        <div
+            class="lawyer-card"
+            onclick="openLawyer('qatali')"
+        >
+
+            <div class="lawyer-photo">
+                <img
+                    src="qatali.jpg"
+                    alt="سید اشرف قتالی"
+                >
+            </div>
+
+            <div class="lawyer-name">
+                سید اشرف قتالی
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LAWYER MODAL
+========================= -->
+
+<div
+    id="lawyerModal"
+    class="modal"
+    onclick="closeOutside(event)"
+>
+
+    <div
+        class="modal-content"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="close-modal"
+            onclick="closeLawyer()"
+        >
+            ×
+        </button>
+
+        <div class="modal-body">
+
+            <img
+                id="modalPhoto"
+                class="modal-photo"
+                src=""
+                alt=""
+            >
+
+            <div class="modal-info">
+
+                <div
+                    id="modalName"
+                    class="modal-name"
+                ></div>
+
+                <div
+                    id="modalDetails"
+                    class="modal-details"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     AFGHANISTAN LAWS
+========================= -->
+
+<section id="laws">
+
+    <h2 class="section-title">
+        قوانین افغانستان
+    </h2>
+
+    <div class="laws-container">
+
+        <div class="pdf-card">
+            <div class="pdf-title">رسمی جریده فوق‌العاده کنه</div>
+            <a class="download-btn" href="ghanon1.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 31</div>
+            <a class="download-btn" href="ghanon2.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 15</div>
+            <a class="download-btn" href="ghanon3.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 33</div>
+            <a class="download-btn" href="ghanon4.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 25</div>
+            <a class="download-btn" href="ghanon5.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 36</div>
+            <a class="download-btn" href="ghanon6.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 38</div>
+            <a class="download-btn" href="ghanon7.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 11</div>
+            <a class="download-btn" href="ghanon8.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 35</div>
+            <a class="download-btn" href="ghanon9.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 40</div>
+            <a class="download-btn" href="ghanon10.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 40</div>
+            <a class="download-btn" href="ghanon11.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 18</div>
+            <a class="download-btn" href="ghanon12.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 15</div>
+            <a class="download-btn" href="ghanon13.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د اختری منتخبی مسئلی</div>
+            <a class="download-btn" href="ghanon14.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">متحدالمال نمبر: 24</div>
+            <a class="download-btn" href="ghanon15.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 16</div>
+            <a class="download-btn" href="ghanon16.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 7</div>
+            <a class="download-btn" href="ghanon17.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">دارالافتاء مدرسه دارالعلوم اسلامیه</div>
+            <a class="download-btn" href="ghanon18.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 49</div>
+            <a class="download-btn" href="ghanon19.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 30</div>
+            <a class="download-btn" href="ghanon20.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">رسمی جریده</div>
+            <a class="download-btn" href="ghanon21.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">شماره متحدالمال: 19</div>
+            <a class="download-btn" href="ghanon22.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">د متحدالمال کنه: 24</div>
+            <a class="download-btn" href="ghanon23.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">اصولنامه جزایی محاکم</div>
+            <a class="download-btn" href="ghanon24.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">
+                د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه:
+            </div>
+            <a class="download-btn" href="ghanon25.pdf" download>دانلود</a>
+        </div>
+
+        <div class="pdf-card">
+            <div class="pdf-title">
+                مجموعه متحدالمال‌های بابت سال ۱۴۴۶ هـ ق
+            </div>
+            <a class="download-btn" href="ghanon26.pdf" download>دانلود</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <h2 class="section-title">
+        تماس با ما
+    </h2>
+
+    <div class="contact-box">
+
+        <p class="contact-intro">
             برای دریافت مشاوره حقوقی، تجاری، مالیاتی و ارتباط با شرکت عمّار،
             می‌توانید از طریق اطلاعات زیر با ما در تماس باشید.
-
         </p>
 
-        <p>
+        <div class="address">
             آدرس: هرات، افغانستان
-        </p>
-
-
-        <!-- شماره تماس -->
-
-        <div class="contact-item">
-
-            <a href="tel:0709940040">
-
-                <svg class="contact-icon phone-icon"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-
-                    <path
-                        d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.94C17.55 15.31 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.69 6.45 9.06 7.57C9.17 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
-                        fill="currentColor">
-                    </path>
-
-                </svg>
-
-                شماره تماس: ۰۷۰۹۹۴۰۰۴۰
-
-            </a>
-
-            <button
-                class="copy-button"
-                onclick="copyText('0709940040')">
-
-                📋 کپی
-
-            </button>
-
         </div>
 
+        <div class="contact-list">
 
-        <!-- واتساپ -->
+            <div class="contact-item">
 
-        <div class="contact-item">
+                <svg
+                    class="phone-svg"
+                    viewBox="0 0 24 24"
+                    fill="#d4af37"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
 
-            <a
-                href="https://wa.me/93709940040"
-                target="_blank"
-                rel="noopener noreferrer">
+                <div class="contact-text">
+                    <span class="contact-label">شماره تماس:</span>
+                    <span class="contact-value">0709940040</span>
+                </div>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyText('0709940040', this)"
+                >
+                    کپی
+                </button>
+
+            </div>
+
+
+            <div class="contact-item">
 
                 <img
                     class="contact-icon"
                     src="https://cdn.simpleicons.org/whatsapp/25D366"
-                    alt="WhatsApp">
+                    alt="WhatsApp"
+                >
 
-                واتساپ: ۰۷۰۹۹۴۰۰۴۰
+                <div class="contact-text">
+                    <span class="contact-label">واتساپ:</span>
 
-            </a>
+                    <a
+                        class="contact-value contact-link"
+                        href="https://wa.me/93709940040"
+                        target="_blank"
+                    >
+                        0709940040
+                    </a>
+                </div>
 
-            <button
-                class="copy-button"
-                onclick="copyText('0709940040')">
+                <button
+                    class="copy-btn"
+                    onclick="copyText('0709940040', this)"
+                >
+                    کپی
+                </button>
 
-                📋 کپی
-
-            </button>
-
-        </div>
+            </div>
 
 
-        <!-- تلگرام -->
-
-        <div class="contact-item">
-
-            <a
-                href="https://t.me/0709940040"
-                target="_blank"
-                rel="noopener noreferrer">
+            <div class="contact-item">
 
                 <img
                     class="contact-icon"
                     src="https://cdn.simpleicons.org/telegram/229ED9"
-                    alt="Telegram">
+                    alt="Telegram"
+                >
 
-                تلگرام: ۰۷۰۹۹۴۰۰۴۰
+                <div class="contact-text">
+                    <span class="contact-label">تلگرام:</span>
 
-            </a>
+                    <a
+                        class="contact-value contact-link"
+                        href="https://t.me/ammarcompany"
+                        target="_blank"
+                    >
+                        @ammarcompany
+                    </a>
+                </div>
 
-            <button
-                class="copy-button"
-                onclick="copyText('0709940040')">
+                <button
+                    class="copy-btn"
+                    onclick="copyText('@ammarcompany', this)"
+                >
+                    کپی
+                </button>
 
-                📋 کپی
-
-            </button>
-
-        </div>
+            </div>
 
 
-        <!-- ایمیل -->
+            <div class="contact-item">
 
-        <div class="contact-item">
+                <img
+                    class="contact-icon"
+                    src="https://cdn.simpleicons.org/gmail/EA4335"
+                    alt="Gmail"
+                >
 
-            <a href="mailto:ammarcompany@gmail.com">
+                <div class="contact-text">
+                    <span class="contact-label">ایمیل:</span>
 
-                <svg class="contact-icon email-icon"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
+                    <a
+                        class="contact-value contact-link"
+                        href="mailto:ammarcompany@gmail.com"
+                    >
+                        ammarcompany@gmail.com
+                    </a>
+                </div>
 
-                    <rect
-                        x="3"
-                        y="5"
-                        width="18"
-                        height="14"
-                        rx="2"
-                        stroke="currentColor"
-                        stroke-width="2">
-                    </rect>
+                <button
+                    class="copy-btn"
+                    onclick="copyText('ammarcompany@gmail.com', this)"
+                >
+                    کپی
+                </button>
 
-                    <path
-                        d="M3 7L12 13L21 7"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round">
-                    </path>
-
-                </svg>
-
-                ایمیل: ammarcompany@gmail.com
-
-            </a>
-
-            <button
-                class="copy-button"
-                onclick="copyText('ammarcompany@gmail.com')">
-
-                📋 کپی
-
-            </button>
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         فوتر
-    ========================== -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-    <footer>
+<footer>
+    © شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
+</footer>
 
-        © شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
 
-    </footer>
+<script>
 
+const lawyers = {
+
+    heydarpour: {
+        name: "دکتر مهدی حیدرپور",
+        image: "heydarpour.jpg",
+        details: `
+            <p><strong>سمت:</strong> رئیس شرکت</p>
+            <p><strong>تحصیلات:</strong> دکترای حقوق جزا و جرم‌شناسی</p>
+            <p><strong>سابقه:</strong> بیش از ۱۲ سال تدریس در دانشگاه‌های داخلی و بین‌المللی در سطح لیسانس و ماستری</p>
+        `
+    },
+
+    yousefi: {
+        name: "ماستر روح‌الله یوسفی",
+        image: "yousefi.jpg",
+        details: `
+            <p><strong>سمت:</strong> معاون شرکت</p>
+            <p><strong>تحصیلات:</strong> ماستری حقوق خصوصی</p>
+            <p><strong>سابقه:</strong> بیش از ۱۰ سال وکالت</p>
+        `
+    },
+
+    qatali: {
+        name: "سید اشرف قتالی",
+        image: "qatali.jpg",
+        details: `
+            <p><strong>سمت:</strong> وکیل شرکت</p>
+            <p><strong>تحصیلات:</strong> فوق لیسانس حقوق جزا</p>
+            <p><strong>سابقه:</strong> بیش از ۸ سال وکالت</p>
+        `
+    }
+
+};
+
+
+function openLawyer(id) {
+
+    const lawyer = lawyers[id];
+
+    if (!lawyer) {
+        return;
+    }
+
+    document.getElementById("modalPhoto").src = lawyer.image;
+    document.getElementById("modalPhoto").alt = lawyer.name;
+
+    document.getElementById("modalName").textContent =
+        lawyer.name;
+
+    document.getElementById("modalDetails").innerHTML =
+        lawyer.details;
+
+    const modal = document.getElementById("lawyerModal");
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeLawyer() {
+
+    document.getElementById("lawyerModal").classList.remove("show");
+
+    document.body.style.overflow = "";
+}
+
+
+function closeOutside(event) {
+
+    if (event.target.id === "lawyerModal") {
+        closeLawyer();
+    }
+
+}
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeLawyer();
+    }
+
+});
+
+
+function copyText(text, button) {
+
+    navigator.clipboard.writeText(text).then(function() {
+
+        const oldText = button.textContent;
+
+        button.textContent = "کپی شد ✓";
+
+        setTimeout(function() {
+            button.textContent = oldText;
+        }, 1500);
+
+    }).catch(function() {
+
+        const temp = document.createElement("textarea");
+
+        temp.value = text;
+
+        document.body.appendChild(temp);
+
+        temp.select();
+
+        document.execCommand("copy");
+
+        document.body.removeChild(temp);
+
+        const oldText = button.textContent;
+
+        button.textContent = "کپی شد ✓";
+
+        setTimeout(function() {
+            button.textContent = oldText;
+        }, 1500);
+
+    });
+
+}
+
+</script>
 
 </body>
-
 </html>
+```
