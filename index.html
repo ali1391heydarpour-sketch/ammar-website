@@ -323,8 +323,6 @@ section {
     z-index: 5;
 }
 
-/* فقط اصلاح نمایش عکس کنار مشخصات */
-
 .modal-body {
     display: flex;
     align-items: center;
@@ -411,6 +409,142 @@ section {
 
 .download-btn:hover {
     background: #f0d875;
+}
+
+/* =========================
+   CONSULTATION FORM
+========================= */
+
+.consultation-box {
+    max-width: 850px;
+    margin: auto;
+    background: rgba(8,18,60,0.88);
+    border: 1px solid rgba(212,175,55,0.75);
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.consultation-intro {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid rgba(212,175,55,0.7);
+    border-radius: 10px;
+    background: #101a48;
+    color: white;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 18px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.15);
+}
+
+.form-group select option {
+    background: #101a48;
+    color: white;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.form-check input {
+    width: 18px;
+    height: 18px;
+    accent-color: #d4af37;
+    cursor: pointer;
+}
+
+.submit-consultation {
+    border: none;
+    background: #d4af37;
+    color: #111;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.submit-consultation:hover {
+    background: #f0d875;
+    transform: translateY(-2px);
+}
+
+.submit-consultation:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-status {
+    display: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(40,167,69,0.18);
+    border: 1px solid #4caf50;
+    color: #7cff91;
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(220,53,69,0.18);
+    border: 1px solid #dc3545;
+    color: #ff8c98;
+}
+
+.telegram-frame {
+    display: none;
 }
 
 /* =========================
@@ -619,6 +753,28 @@ footer {
         font-size: 17px;
     }
 
+    .consultation-box {
+        padding: 25px 18px;
+    }
+
+    .consultation-intro {
+        font-size: 17px;
+    }
+
+    .form-group label {
+        font-size: 17px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 17px;
+    }
+
+    .submit-consultation {
+        font-size: 18px;
+    }
+
     .contact-box {
         padding: 25px 18px;
     }
@@ -649,8 +805,6 @@ footer {
     .modal-content {
         padding: 25px 15px;
     }
-
-    /* در موبایل عکس کنار متن باقی می‌ماند ولی اندازه مناسب می‌شود */
 
     .modal-body {
         flex-direction: row;
@@ -781,6 +935,7 @@ footer {
             <a href="#services">خدمات</a>
             <a href="#lawyers">وکلا</a>
             <a href="#laws">قوانین افغانستان</a>
+            <a href="#consultation">درخواست مشاوره</a>
             <a href="#contact">تماس با ما</a>
         </div>
 
@@ -1172,6 +1327,181 @@ footer {
 
 
 <!-- =========================
+     CONSULTATION REQUEST
+========================= -->
+
+<section id="consultation">
+
+    <h2 class="section-title">
+        درخواست مشاوره
+    </h2>
+
+    <div class="consultation-box">
+
+        <p class="consultation-intro">
+            برای درخواست مشاوره، فرم زیر را با دقت تکمیل نمایید.
+            درخواست شما مستقیماً برای شرکت عمّار ارسال خواهد شد.
+        </p>
+
+        <form
+            id="consultationForm"
+            class="consultation-form"
+            action="https://script.google.com/macros/s/AKfycbyNDxoJbG_qlrx1YMlcPgFo1dy9PKUInWKTmq6o73CMFBw-blYzJMxG8GfTXK6S1QyVYw/exec"
+            method="POST"
+            target="telegramFrame"
+        >
+
+            <div class="form-group">
+
+                <label for="name">
+                    نام و نام خانوادگی
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="نام و نام خانوادگی خود را وارد کنید"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    شماره تماس
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="مثلاً 0701234567"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="service">
+                    نوع خدمات مورد نیاز
+                </label>
+
+                <select
+                    id="service"
+                    name="service"
+                    required
+                >
+
+                    <option value="">
+                        انتخاب کنید
+                    </option>
+
+                    <option value="مشاوره حقوقی">
+                        مشاوره حقوقی
+                    </option>
+
+                    <option value="خدمات تجاری">
+                        خدمات تجاری
+                    </option>
+
+                    <option value="خدمات مالیاتی">
+                        خدمات مالیاتی
+                    </option>
+
+                    <option value="تهیه و بررسی قرارداد">
+                        تهیه و بررسی قرارداد
+                    </option>
+
+                    <option value="حل و فصل اختلافات">
+                        حل و فصل اختلافات
+                    </option>
+
+                    <option value="حکمیت">
+                        حکمیت
+                    </option>
+
+                    <option value="سازش و میانجیگری">
+                        سازش و میانجیگری
+                    </option>
+
+                    <option value="مذاکره">
+                        مذاکره
+                    </option>
+
+                    <option value="سایر">
+                        سایر
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    توضیحات درخواست
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="موضوع یا مشکل خود را توضیح دهید..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <label class="form-check">
+
+                <input
+                    type="checkbox"
+                    id="confirmInfo"
+                    required
+                >
+
+                <span>
+                    اطلاعات واردشده را بررسی کرده‌ام و صحت آن را تأیید می‌کنم.
+                </span>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="submit-consultation"
+                id="submitConsultation"
+            >
+                ارسال درخواست مشاوره
+            </button>
+
+
+            <div
+                id="formStatus"
+                class="form-status"
+            ></div>
+
+        </form>
+
+
+        <iframe
+            name="telegramFrame"
+            id="telegramFrame"
+            class="telegram-frame"
+        ></iframe>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      CONTACT
 ========================= -->
 
@@ -1450,8 +1780,78 @@ function copyText(text, button) {
 
 }
 
+
+/* =========================
+   CONSULTATION FORM
+========================= */
+
+const consultationForm =
+    document.getElementById("consultationForm");
+
+const telegramFrame =
+    document.getElementById("telegramFrame");
+
+const formStatus =
+    document.getElementById("formStatus");
+
+const submitConsultation =
+    document.getElementById("submitConsultation");
+
+let formSubmitted = false;
+
+
+consultationForm.addEventListener("submit", function() {
+
+    formSubmitted = true;
+
+    submitConsultation.disabled = true;
+
+    submitConsultation.textContent =
+        "در حال ارسال...";
+
+    formStatus.className =
+        "form-status";
+
+    formStatus.style.display =
+        "none";
+
+});
+
+
+telegramFrame.addEventListener("load", function() {
+
+    if (!formSubmitted) {
+        return;
+    }
+
+    formSubmitted = false;
+
+    submitConsultation.disabled = false;
+
+    submitConsultation.textContent =
+        "ارسال درخواست مشاوره";
+
+    formStatus.className =
+        "form-status success";
+
+    formStatus.textContent =
+        "درخواست شما با موفقیت ارسال شد ✓";
+
+    formStatus.style.display =
+        "block";
+
+    consultationForm.reset();
+
+    setTimeout(function() {
+
+        formStatus.style.display =
+            "none";
+
+    }, 6000);
+
+});
+
 </script>
 
 </body>
 </html>
-```
