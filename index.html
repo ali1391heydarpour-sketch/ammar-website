@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101747">
 
 <title>شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار</title>
 
@@ -15,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 }
 
 body {
@@ -24,9 +27,11 @@ body {
     line-height: 2;
 }
 
-/* =========================
-   HEADER
-========================= */
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+/* HEADER */
 
 header {
     background: linear-gradient(90deg, #101747, #152b72, #101747);
@@ -57,7 +62,7 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 22px;
     flex-wrap: wrap;
 }
 
@@ -73,9 +78,7 @@ header {
     color: #d4af37;
 }
 
-/* =========================
-   GENERAL
-========================= */
+/* GENERAL */
 
 section {
     padding: 85px 7%;
@@ -98,9 +101,7 @@ section {
     margin: 20px auto 0;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 720px;
@@ -151,9 +152,7 @@ section {
     transform: translateY(-2px);
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about-box {
     max-width: 1100px;
@@ -175,9 +174,7 @@ section {
     margin-bottom: 0;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services-grid {
     max-width: 1250px;
@@ -193,16 +190,13 @@ section {
     background: linear-gradient(135deg, #111b4b, #17265e);
     border: 1px solid rgba(212, 175, 55, 0.7);
     border-radius: 17px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     color: #d4af37;
     font-size: 21px;
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -212,9 +206,7 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* =========================
-   LAWYERS
-========================= */
+/* LAWYERS */
 
 .lawyers-grid {
     max-width: 1250px;
@@ -258,8 +250,6 @@ section {
     display: block;
 }
 
-/* فقط تنظیم عکس دکتر مهدی حیدرپور */
-
 .lawyer-photo img.heydarpour-photo {
     object-position: center 8%;
 }
@@ -270,16 +260,13 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-
     color: #d4af37;
     font-size: 22px;
     font-weight: bold;
     padding: 15px;
 }
 
-/* =========================
-   LAWYER MODAL
-========================= */
+/* LAWYER MODAL */
 
 .modal {
     display: none;
@@ -366,9 +353,7 @@ section {
     margin: 8px 0;
 }
 
-/* =========================
-   LAWS / PDF
-========================= */
+/* LAWS */
 
 .laws-container {
     max-width: 1100px;
@@ -411,11 +396,10 @@ section {
     background: #f0d875;
 }
 
-/* =========================
-   CONSULTATION FORM
-========================= */
+/* SHARED FORM STYLES */
 
-.consultation-box {
+.consultation-box,
+.qa-form-box {
     max-width: 850px;
     margin: auto;
     background: rgba(8,18,60,0.88);
@@ -425,13 +409,15 @@ section {
     box-shadow: 0 10px 35px rgba(0,0,0,0.25);
 }
 
-.consultation-intro {
+.consultation-intro,
+.qa-intro {
     text-align: center;
     font-size: 21px;
     margin-bottom: 30px;
 }
 
-.consultation-form {
+.consultation-form,
+.qa-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -482,7 +468,7 @@ section {
 
 .form-check {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     font-size: 17px;
     cursor: pointer;
@@ -491,11 +477,14 @@ section {
 .form-check input {
     width: 18px;
     height: 18px;
+    margin-top: 9px;
+    flex-shrink: 0;
     accent-color: #d4af37;
     cursor: pointer;
 }
 
-.submit-consultation {
+.submit-consultation,
+.submit-question {
     border: none;
     background: #d4af37;
     color: #111;
@@ -509,12 +498,14 @@ section {
     margin-top: 5px;
 }
 
-.submit-consultation:hover {
+.submit-consultation:hover,
+.submit-question:hover {
     background: #f0d875;
     transform: translateY(-2px);
 }
 
-.submit-consultation:disabled {
+.submit-consultation:disabled,
+.submit-question:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
@@ -527,6 +518,7 @@ section {
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
 .form-status.success {
@@ -547,9 +539,118 @@ section {
     display: none;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* QUESTIONS AND ANSWERS */
+
+.qa-description {
+    max-width: 900px;
+    margin: -25px auto 35px;
+    text-align: center;
+    font-size: 19px;
+    color: #e6e9ff;
+}
+
+.qa-form-box {
+    margin-bottom: 45px;
+}
+
+.qa-notice {
+    margin-top: 20px;
+    color: #d7dcf5;
+    font-size: 15px;
+    text-align: center;
+}
+
+.qa-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.qa-card {
+    background: linear-gradient(135deg, #10194a, #17255b);
+    border: 1px solid rgba(212,175,55,0.7);
+    border-radius: 16px;
+    padding: 25px;
+    overflow-wrap: anywhere;
+}
+
+.qa-card-category {
+    display: inline-block;
+    background: rgba(212,175,55,0.14);
+    border: 1px solid rgba(212,175,55,0.65);
+    color: #f0d875;
+    padding: 3px 13px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.qa-card-question-title,
+.qa-card-answer-title {
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.qa-card-question,
+.qa-card-answer {
+    font-size: 18px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.qa-card-answer-box {
+    margin-top: 22px;
+    padding: 18px;
+    background: rgba(0,0,0,0.18);
+    border-right: 3px solid #d4af37;
+    border-radius: 8px;
+}
+
+.qa-card-date {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #c6cbea;
+}
+
+.qa-loading,
+.qa-empty,
+.qa-error {
+    max-width: 850px;
+    margin: auto;
+    padding: 22px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(8,18,60,0.75);
+    border: 1px solid rgba(212,175,55,0.5);
+    font-size: 18px;
+}
+
+.qa-error {
+    color: #ffb0b7;
+}
+
+.qa-refresh {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 22px;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 9px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.qa-refresh:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+/* CONTACT */
 
 .contact-box {
     max-width: 850px;
@@ -641,7 +742,6 @@ section {
     color: #111;
 }
 
-/* SVG PHONE */
 .phone-svg {
     width: 42px;
     height: 42px;
@@ -649,9 +749,7 @@ section {
     margin: auto;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     border-top: 3px solid #d4af37;
@@ -662,12 +760,9 @@ footer {
     font-size: 18px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 1000px) {
-
     .navbar {
         flex-direction: column;
         justify-content: center;
@@ -702,7 +797,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-
     section {
         padding: 65px 20px;
     }
@@ -753,11 +847,13 @@ footer {
         font-size: 17px;
     }
 
-    .consultation-box {
+    .consultation-box,
+    .qa-form-box {
         padding: 25px 18px;
     }
 
-    .consultation-intro {
+    .consultation-intro,
+    .qa-intro {
         font-size: 17px;
     }
 
@@ -771,7 +867,8 @@ footer {
         font-size: 17px;
     }
 
-    .submit-consultation {
+    .submit-consultation,
+    .submit-question {
         font-size: 18px;
     }
 
@@ -830,10 +927,23 @@ footer {
         font-size: 15px;
         line-height: 2;
     }
+
+    .qa-card {
+        padding: 18px;
+    }
+
+    .qa-card-question-title,
+    .qa-card-answer-title {
+        font-size: 18px;
+    }
+
+    .qa-card-question,
+    .qa-card-answer {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 450px) {
-
     .navbar {
         padding: 15px 12px;
     }
@@ -881,10 +991,7 @@ footer {
         font-size: 16px;
     }
 
-    .contact-intro {
-        font-size: 17px;
-    }
-
+    .contact-intro,
     .address {
         font-size: 17px;
     }
@@ -919,13 +1026,10 @@ footer {
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
     <nav class="navbar">
-
         <div class="site-title">
             شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
         </div>
@@ -935,53 +1039,35 @@ footer {
             <a href="#services">خدمات</a>
             <a href="#lawyers">وکلا</a>
             <a href="#laws">قوانین افغانستان</a>
+            <a href="#qa">پرسش و پاسخ</a>
             <a href="#consultation">درخواست مشاوره</a>
             <a href="#contact">تماس با ما</a>
         </div>
-
     </nav>
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
-
     <img
         src="logo.png"
         alt="لوگوی شرکت مشاوره حقوقی عمّار"
         class="hero-logo"
     >
 
-    <h1>
-        شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
-    </h1>
+    <h1>شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار</h1>
 
-    <p>
-        مشاوره حقوقی، تجاری، مالیاتی مطمئن برای شما
-    </p>
+    <p>مشاوره حقوقی، تجاری، مالیاتی مطمئن برای شما</p>
 
-    <a href="#contact" class="hero-btn">
-        تماس با ما
-    </a>
-
+    <a href="#contact" class="hero-btn">تماس با ما</a>
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
-
-    <h2 class="section-title">
-        درباره ما
-    </h2>
+    <h2 class="section-title">درباره ما</h2>
 
     <div class="about-box">
-
         <p>
             شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار با هدف ارائه خدمات
             تخصصی حقوقی، تجاری و مالیاتی فعالیت می‌نماید.
@@ -998,74 +1084,32 @@ footer {
             قراردادها، حل و فصل اختلافات، حکمیت، سازش، میانجیگری،
             مذاکره و مساعی جمیله می‌باشد.
         </p>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- SERVICES -->
 
 <section id="services">
-
-    <h2 class="section-title">
-        خدمات
-    </h2>
+    <h2 class="section-title">خدمات</h2>
 
     <div class="services-grid">
-
-        <div class="service-card">
-            مشاوره حقوقی، تجاری و مالیاتی
-        </div>
-
-        <div class="service-card">
-            تهیه و بررسی قراردادها
-        </div>
-
-        <div class="service-card">
-            حل و فصل اختلافات حقوقی و تجاری
-        </div>
-
-        <div class="service-card">
-            ارائه راهکارهای قانونی برای کسب‌وکارها
-        </div>
-
-        <div class="service-card">
-            حکمیت
-        </div>
-
-        <div class="service-card">
-            سازش، میانجیگری و مذاکره
-        </div>
-
-        <div class="service-card">
-            مساعی جمیله
-        </div>
-
+        <div class="service-card">مشاوره حقوقی، تجاری و مالیاتی</div>
+        <div class="service-card">تهیه و بررسی قراردادها</div>
+        <div class="service-card">حل و فصل اختلافات حقوقی و تجاری</div>
+        <div class="service-card">ارائه راهکارهای قانونی برای کسب‌وکارها</div>
+        <div class="service-card">حکمیت</div>
+        <div class="service-card">سازش، میانجیگری و مذاکره</div>
+        <div class="service-card">مساعی جمیله</div>
     </div>
-
 </section>
 
-
-<!-- =========================
-     LAWYERS
-========================= -->
+<!-- LAWYERS -->
 
 <section id="lawyers">
-
-    <h2 class="section-title">
-        وکلا
-    </h2>
+    <h2 class="section-title">وکلا</h2>
 
     <div class="lawyers-grid">
-
-        <div
-            class="lawyer-card"
-            onclick="openLawyer('heydarpour')"
-        >
-
+        <div class="lawyer-card" onclick="openLawyer('heydarpour')">
             <div class="lawyer-photo">
                 <img
                     src="heydarpour.jpg"
@@ -1073,274 +1117,189 @@ footer {
                     class="heydarpour-photo"
                 >
             </div>
-
-            <div class="lawyer-name">
-                دکتر مهدی حیدرپور
-            </div>
-
+            <div class="lawyer-name">دکتر مهدی حیدرپور</div>
         </div>
 
-
-        <div
-            class="lawyer-card"
-            onclick="openLawyer('yousefi')"
-        >
-
+        <div class="lawyer-card" onclick="openLawyer('yousefi')">
             <div class="lawyer-photo">
-                <img
-                    src="yousefi.jpg"
-                    alt="ماستر روح‌الله یوسفی"
-                >
+                <img src="yousefi.jpg" alt="ماستر روح‌الله یوسفی">
             </div>
-
-            <div class="lawyer-name">
-                ماستر روح‌الله یوسفی
-            </div>
-
+            <div class="lawyer-name">ماستر روح‌الله یوسفی</div>
         </div>
 
-
-        <div
-            class="lawyer-card"
-            onclick="openLawyer('qatali')"
-        >
-
+        <div class="lawyer-card" onclick="openLawyer('qatali')">
             <div class="lawyer-photo">
-                <img
-                    src="qatali.jpg"
-                    alt="سید اشرف قتالی"
-                >
+                <img src="qatali.jpg" alt="سید اشرف قتالی">
             </div>
-
-            <div class="lawyer-name">
-                سید اشرف قتالی
-            </div>
-
+            <div class="lawyer-name">سید اشرف قتالی</div>
         </div>
-
     </div>
-
 </section>
 
+<!-- LAWYER MODAL -->
 
-<!-- =========================
-     LAWYER MODAL
-========================= -->
-
-<div
-    id="lawyerModal"
-    class="modal"
-    onclick="closeOutside(event)"
->
-
-    <div
-        class="modal-content"
-        onclick="event.stopPropagation()"
-    >
-
-        <button
-            class="close-modal"
-            onclick="closeLawyer()"
-        >
-            ×
-        </button>
+<div id="lawyerModal" class="modal" onclick="closeOutside(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-modal" onclick="closeLawyer()" aria-label="بستن">×</button>
 
         <div class="modal-body">
-
-            <img
-                id="modalPhoto"
-                class="modal-photo"
-                src=""
-                alt=""
-            >
+            <img id="modalPhoto" class="modal-photo" src="" alt="">
 
             <div class="modal-info">
-
-                <div
-                    id="modalName"
-                    class="modal-name"
-                ></div>
-
-                <div
-                    id="modalDetails"
-                    class="modal-details"
-                ></div>
-
+                <div id="modalName" class="modal-name"></div>
+                <div id="modalDetails" class="modal-details"></div>
             </div>
-
         </div>
-
     </div>
-
 </div>
 
-
-<!-- =========================
-     AFGHANISTAN LAWS
-========================= -->
+<!-- AFGHANISTAN LAWS -->
 
 <section id="laws">
-
-    <h2 class="section-title">
-        قوانین افغانستان
-    </h2>
+    <h2 class="section-title">قوانین افغانستان</h2>
 
     <div class="laws-container">
-
-        <div class="pdf-card">
-            <div class="pdf-title">رسمی جریده فوق‌العاده کنه</div>
-            <a class="download-btn" href="ghanon1.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 31</div>
-            <a class="download-btn" href="ghanon2.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 15</div>
-            <a class="download-btn" href="ghanon3.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 33</div>
-            <a class="download-btn" href="ghanon4.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 25</div>
-            <a class="download-btn" href="ghanon5.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 36</div>
-            <a class="download-btn" href="ghanon6.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 38</div>
-            <a class="download-btn" href="ghanon7.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 11</div>
-            <a class="download-btn" href="ghanon8.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 35</div>
-            <a class="download-btn" href="ghanon9.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 40</div>
-            <a class="download-btn" href="ghanon10.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 40</div>
-            <a class="download-btn" href="ghanon11.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 18</div>
-            <a class="download-btn" href="ghanon12.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 15</div>
-            <a class="download-btn" href="ghanon13.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د اختری منتخبی مسئلی</div>
-            <a class="download-btn" href="ghanon14.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">متحدالمال نمبر: 24</div>
-            <a class="download-btn" href="ghanon15.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 16</div>
-            <a class="download-btn" href="ghanon16.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 7</div>
-            <a class="download-btn" href="ghanon17.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">دارالافتاء مدرسه دارالعلوم اسلامیه</div>
-            <a class="download-btn" href="ghanon18.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 49</div>
-            <a class="download-btn" href="ghanon19.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 30</div>
-            <a class="download-btn" href="ghanon20.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">رسمی جریده</div>
-            <a class="download-btn" href="ghanon21.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">شماره متحدالمال: 19</div>
-            <a class="download-btn" href="ghanon22.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">د متحدالمال کنه: 24</div>
-            <a class="download-btn" href="ghanon23.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">اصولنامه جزایی محاکم</div>
-            <a class="download-btn" href="ghanon24.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">
-                د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه:
-            </div>
-            <a class="download-btn" href="ghanon25.pdf" download>دانلود</a>
-        </div>
-
-        <div class="pdf-card">
-            <div class="pdf-title">
-                مجموعه متحدالمال‌های بابت سال ۱۴۴۶ هـ ق
-            </div>
-            <a class="download-btn" href="ghanon26.pdf" download>دانلود</a>
-        </div>
-
+        <div class="pdf-card"><div class="pdf-title">رسمی جریده فوق‌العاده کنه</div><a class="download-btn" href="ghanon1.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 31</div><a class="download-btn" href="ghanon2.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 15</div><a class="download-btn" href="ghanon3.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 33</div><a class="download-btn" href="ghanon4.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 25</div><a class="download-btn" href="ghanon5.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 36</div><a class="download-btn" href="ghanon6.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 38</div><a class="download-btn" href="ghanon7.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 11</div><a class="download-btn" href="ghanon8.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 35</div><a class="download-btn" href="ghanon9.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 40</div><a class="download-btn" href="ghanon10.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 40</div><a class="download-btn" href="ghanon11.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 18</div><a class="download-btn" href="ghanon12.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 15</div><a class="download-btn" href="ghanon13.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د اختری منتخبی مسئلی</div><a class="download-btn" href="ghanon14.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">متحدالمال نمبر: 24</div><a class="download-btn" href="ghanon15.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 16</div><a class="download-btn" href="ghanon16.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 7</div><a class="download-btn" href="ghanon17.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">دارالافتاء مدرسه دارالعلوم اسلامیه</div><a class="download-btn" href="ghanon18.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 49</div><a class="download-btn" href="ghanon19.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 30</div><a class="download-btn" href="ghanon20.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">رسمی جریده</div><a class="download-btn" href="ghanon21.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">شماره متحدالمال: 19</div><a class="download-btn" href="ghanon22.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د متحدالمال کنه: 24</div><a class="download-btn" href="ghanon23.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">اصولنامه جزایی محاکم</div><a class="download-btn" href="ghanon24.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">د زوجینو د تفریق اصولنامی د انفاذ په هکله د عالیقدر امیرالمومنین فرمان کنه:</div><a class="download-btn" href="ghanon25.pdf" download>دانلود</a></div>
+        <div class="pdf-card"><div class="pdf-title">مجموعه متحدالمال‌های بابت سال ۱۴۴۶ هـ ق</div><a class="download-btn" href="ghanon26.pdf" download>دانلود</a></div>
     </div>
-
 </section>
 
+<!-- QUESTIONS AND ANSWERS -->
 
-<!-- =========================
-     CONSULTATION REQUEST
-========================= -->
+<section id="qa">
+    <h2 class="section-title">پرسش و پاسخ</h2>
+
+    <p class="qa-description">
+        پرسش حقوقی، تجاری یا مالیاتی خود را ارسال کنید.
+        پرسش پس از بررسی شرکت عمّار منتشر می‌شود و پاسخ‌های تأییدشده
+        در همین صفحه برای عموم قابل مشاهده خواهند بود.
+    </p>
+
+    <div class="qa-form-box">
+        <p class="qa-intro">
+            برای ارسال پرسش، فرم زیر را تکمیل نمایید.
+        </p>
+
+        <form id="qaForm" class="qa-form"
+              action="https://script.google.com/macros/s/AKfycbyNDxoJbG_qlrx1YMlcPgFo1dy9PKUInWKTmq6o73CMFBw-blYzJMxG8GfTXK6S1QyVYw/exec"
+              method="POST"
+              target="qaFrame">
+
+            <input type="hidden" name="action" value="submitQuestion">
+
+            <div class="form-group">
+                <label for="qaName">نام (اختیاری)</label>
+                <input
+                    type="text"
+                    id="qaName"
+                    name="name"
+                    maxlength="100"
+                    placeholder="نام خود را وارد کنید"
+                    autocomplete="name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="qaPhone">شماره تماس (برای پیگیری)</label>
+                <input
+                    type="tel"
+                    id="qaPhone"
+                    name="phone"
+                    maxlength="30"
+                    placeholder="شماره تماس خود را وارد کنید"
+                    required
+                    autocomplete="tel"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="qaCategory">دسته‌بندی پرسش</label>
+                <select id="qaCategory" name="category" required>
+                    <option value="">انتخاب کنید</option>
+                    <option value="حقوقی">حقوقی</option>
+                    <option value="تجاری">تجاری</option>
+                    <option value="مالیاتی">مالیاتی</option>
+                    <option value="قراردادها">قراردادها</option>
+                    <option value="حل اختلافات">حل اختلافات</option>
+                    <option value="سایر">سایر</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="qaQuestion">متن پرسش</label>
+                <textarea
+                    id="qaQuestion"
+                    name="question"
+                    minlength="5"
+                    maxlength="5000"
+                    placeholder="پرسش خود را به‌صورت روشن و کامل بنویسید..."
+                    required
+                ></textarea>
+            </div>
+
+            <label class="form-check">
+                <input type="checkbox" id="qaConfirm" required>
+                <span>
+                    می‌دانم که پرسش من پیش از انتشار بررسی می‌شود و اطلاعات تماس من در صفحه عمومی نمایش داده نخواهد شد.
+                </span>
+            </label>
+
+            <button type="submit" class="submit-question" id="submitQuestion">
+                ارسال پرسش
+            </button>
+
+            <div id="qaFormStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <iframe name="qaFrame" id="qaFrame" class="telegram-frame" title="نتیجه ارسال پرسش"></iframe>
+
+        <p class="qa-notice">
+            پاسخ‌های منتشرشده برای آگاهی عمومی هستند و جایگزین مشاوره حقوقی اختصاصی نمی‌شوند.
+        </p>
+    </div>
+
+    <div id="qaList" class="qa-list" aria-live="polite">
+        <div class="qa-loading">در حال دریافت پرسش‌ها و پاسخ‌ها...</div>
+    </div>
+
+    <button type="button" class="qa-refresh" id="refreshQA">
+        تازه‌سازی پرسش‌ها
+    </button>
+</section>
+
+<!-- CONSULTATION REQUEST -->
 
 <section id="consultation">
-
-    <h2 class="section-title">
-        درخواست مشاوره
-    </h2>
+    <h2 class="section-title">درخواست مشاوره</h2>
 
     <div class="consultation-box">
-
         <p class="consultation-intro">
             برای درخواست مشاوره، فرم زیر را با دقت تکمیل نمایید.
-            درخواست شما مستقیماً برای شرکت عمّار ارسال خواهد شد.
+            درخواست شما برای شرکت عمّار ارسال خواهد شد.
         </p>
 
         <form
@@ -1350,188 +1309,97 @@ footer {
             method="POST"
             target="telegramFrame"
         >
-
             <div class="form-group">
-
-                <label for="name">
-                    نام و نام خانوادگی
-                </label>
-
+                <label for="name">نام و نام خانوادگی</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="نام و نام خانوادگی خود را وارد کنید"
+                    maxlength="150"
+                    autocomplete="name"
                     required
                 >
-
             </div>
 
-
             <div class="form-group">
-
-                <label for="phone">
-                    شماره تماس
-                </label>
-
+                <label for="phone">شماره تماس</label>
                 <input
                     type="tel"
                     id="phone"
                     name="phone"
                     placeholder="مثلاً 0701234567"
+                    maxlength="30"
+                    autocomplete="tel"
                     required
                 >
-
             </div>
 
-
             <div class="form-group">
-
-                <label for="service">
-                    نوع خدمات مورد نیاز
-                </label>
-
-                <select
-                    id="service"
-                    name="service"
-                    required
-                >
-
-                    <option value="">
-                        انتخاب کنید
-                    </option>
-
-                    <option value="مشاوره حقوقی">
-                        مشاوره حقوقی
-                    </option>
-
-                    <option value="خدمات تجاری">
-                        خدمات تجاری
-                    </option>
-
-                    <option value="خدمات مالیاتی">
-                        خدمات مالیاتی
-                    </option>
-
-                    <option value="تهیه و بررسی قرارداد">
-                        تهیه و بررسی قرارداد
-                    </option>
-
-                    <option value="حل و فصل اختلافات">
-                        حل و فصل اختلافات
-                    </option>
-
-                    <option value="حکمیت">
-                        حکمیت
-                    </option>
-
-                    <option value="سازش و میانجیگری">
-                        سازش و میانجیگری
-                    </option>
-
-                    <option value="مذاکره">
-                        مذاکره
-                    </option>
-
-                    <option value="سایر">
-                        سایر
-                    </option>
-
+                <label for="service">نوع خدمات مورد نیاز</label>
+                <select id="service" name="service" required>
+                    <option value="">انتخاب کنید</option>
+                    <option value="مشاوره حقوقی">مشاوره حقوقی</option>
+                    <option value="خدمات تجاری">خدمات تجاری</option>
+                    <option value="خدمات مالیاتی">خدمات مالیاتی</option>
+                    <option value="تهیه و بررسی قرارداد">تهیه و بررسی قرارداد</option>
+                    <option value="حل و فصل اختلافات">حل و فصل اختلافات</option>
+                    <option value="حکمیت">حکمیت</option>
+                    <option value="سازش و میانجیگری">سازش و میانجیگری</option>
+                    <option value="مذاکره">مذاکره</option>
+                    <option value="سایر">سایر</option>
                 </select>
-
             </div>
 
-
             <div class="form-group">
-
-                <label for="message">
-                    توضیحات درخواست
-                </label>
-
+                <label for="message">توضیحات درخواست</label>
                 <textarea
                     id="message"
                     name="message"
+                    maxlength="5000"
                     placeholder="موضوع یا مشکل خود را توضیح دهید..."
                     required
                 ></textarea>
-
             </div>
 
-
             <label class="form-check">
-
-                <input
-                    type="checkbox"
-                    id="confirmInfo"
-                    required
-                >
-
-                <span>
-                    اطلاعات واردشده را بررسی کرده‌ام و صحت آن را تأیید می‌کنم.
-                </span>
-
+                <input type="checkbox" id="confirmInfo" required>
+                <span>اطلاعات واردشده را بررسی کرده‌ام و صحت آن را تأیید می‌کنم.</span>
             </label>
 
-
-            <button
-                type="submit"
-                class="submit-consultation"
-                id="submitConsultation"
-            >
+            <button type="submit" class="submit-consultation" id="submitConsultation">
                 ارسال درخواست مشاوره
             </button>
 
-
-            <div
-                id="formStatus"
-                class="form-status"
-            ></div>
-
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
         </form>
-
 
         <iframe
             name="telegramFrame"
             id="telegramFrame"
             class="telegram-frame"
+            title="نتیجه ارسال درخواست مشاوره"
         ></iframe>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section id="contact">
-
-    <h2 class="section-title">
-        تماس با ما
-    </h2>
+    <h2 class="section-title">تماس با ما</h2>
 
     <div class="contact-box">
-
         <p class="contact-intro">
             برای دریافت مشاوره حقوقی، تجاری، مالیاتی و ارتباط با شرکت عمّار،
             می‌توانید از طریق اطلاعات زیر با ما در تماس باشید.
         </p>
 
-        <div class="address">
-            آدرس: هرات، افغانستان
-        </div>
+        <div class="address">آدرس: هرات، افغانستان</div>
 
         <div class="contact-list">
-
             <div class="contact-item">
-
-                <svg
-                    class="phone-svg"
-                    viewBox="0 0 24 24"
-                    fill="#d4af37"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg class="phone-svg" viewBox="0 0 24 24" fill="#d4af37"
+                     xmlns="http://www.w3.org/2000/svg" aria-label="تلفن">
                     <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
 
@@ -1540,318 +1408,439 @@ footer {
                     <span class="contact-value">0709940040</span>
                 </div>
 
-                <button
-                    class="copy-btn"
-                    onclick="copyText('0709940040', this)"
-                >
-                    کپی
-                </button>
-
+                <button class="copy-btn" type="button" onclick="copyText('0709940040', this)">کپی</button>
             </div>
 
-
             <div class="contact-item">
-
-                <img
-                    class="contact-icon"
-                    src="https://cdn.simpleicons.org/whatsapp/25D366"
-                    alt="WhatsApp"
-                >
+                <img class="contact-icon" src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp">
 
                 <div class="contact-text">
                     <span class="contact-label">واتساپ:</span>
-
-                    <a
-                        class="contact-value contact-link"
-                        href="https://wa.me/93709940040"
-                        target="_blank"
-                    >
-                        0709940040
-                    </a>
+                    <a class="contact-value contact-link" href="https://wa.me/93709940040" target="_blank" rel="noopener noreferrer">0709940040</a>
                 </div>
 
-                <button
-                    class="copy-btn"
-                    onclick="copyText('0709940040', this)"
-                >
-                    کپی
-                </button>
-
+                <button class="copy-btn" type="button" onclick="copyText('0709940040', this)">کپی</button>
             </div>
 
-
             <div class="contact-item">
-
-                <img
-                    class="contact-icon"
-                    src="https://cdn.simpleicons.org/telegram/229ED9"
-                    alt="Telegram"
-                >
+                <img class="contact-icon" src="https://cdn.simpleicons.org/telegram/229ED9" alt="Telegram">
 
                 <div class="contact-text">
                     <span class="contact-label">تلگرام:</span>
-
-                    <a
-                        class="contact-value contact-link"
-                        href="https://t.me/ammarcompany"
-                        target="_blank"
-                    >
-                        @ammarcompany
-                    </a>
+                    <a class="contact-value contact-link" href="https://t.me/ammarcompany" target="_blank" rel="noopener noreferrer">@ammarcompany</a>
                 </div>
 
-                <button
-                    class="copy-btn"
-                    onclick="copyText('@ammarcompany', this)"
-                >
-                    کپی
-                </button>
-
+                <button class="copy-btn" type="button" onclick="copyText('@ammarcompany', this)">کپی</button>
             </div>
 
-
             <div class="contact-item">
-
-                <img
-                    class="contact-icon"
-                    src="https://cdn.simpleicons.org/gmail/EA4335"
-                    alt="Gmail"
-                >
+                <img class="contact-icon" src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail">
 
                 <div class="contact-text">
                     <span class="contact-label">ایمیل:</span>
-
-                    <a
-                        class="contact-value contact-link"
-                        href="mailto:ammarcompany@gmail.com"
-                    >
-                        ammarcompany@gmail.com
-                    </a>
+                    <a class="contact-value contact-link" href="mailto:ammarcompany@gmail.com">ammarcompany@gmail.com</a>
                 </div>
 
-                <button
-                    class="copy-btn"
-                    onclick="copyText('ammarcompany@gmail.com', this)"
-                >
-                    کپی
-                </button>
-
+                <button class="copy-btn" type="button" onclick="copyText('ammarcompany@gmail.com', this)">کپی</button>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
     © شرکت مشاوره حقوقی، تجاری، مالیاتی عمّار
 </footer>
 
-
 <script>
+"use strict";
+
+/* =========================
+   CONFIGURATION
+========================= */
+
+const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyNDxoJbG_qlrx1YMlcPgFo1dy9PKUInWKTmq6o73CMFBw-blYzJMxG8GfTXK6S1QyVYw/exec";
+
+/* =========================
+   LAWYERS
+========================= */
 
 const lawyers = {
-
     heydarpour: {
         name: "دکتر مهدی حیدرپور",
         image: "heydarpour.jpg",
-        details: `
-            <p><strong>سمت:</strong> رئیس شرکت</p>
-            <p><strong>تحصیلات:</strong> دکترای حقوق جزا و جرم‌شناسی</p>
-            <p><strong>سابقه:</strong> بیش از ۱۲ سال تدریس در دانشگاه‌های داخلی و بین‌المللی در سطح لیسانس و ماستری</p>
-        `
+        details: [
+            ["سمت", "رئیس شرکت"],
+            ["تحصیلات", "دکترای حقوق جزا و جرم‌شناسی"],
+            ["سابقه", "بیش از ۱۲ سال تدریس در دانشگاه‌های داخلی و بین‌المللی در سطح لیسانس و ماستری"]
+        ]
     },
 
     yousefi: {
         name: "ماستر روح‌الله یوسفی",
         image: "yousefi.jpg",
-        details: `
-            <p><strong>سمت:</strong> معاون شرکت</p>
-            <p><strong>تحصیلات:</strong> ماستری حقوق خصوصی</p>
-            <p><strong>سابقه:</strong> بیش از ۱۰ سال وکالت</p>
-        `
+        details: [
+            ["سمت", "معاون شرکت"],
+            ["تحصیلات", "ماستری حقوق خصوصی"],
+            ["سابقه", "بیش از ۱۰ سال وکالت"]
+        ]
     },
 
     qatali: {
         name: "سید اشرف قتالی",
         image: "qatali.jpg",
-        details: `
-            <p><strong>سمت:</strong> وکیل شرکت</p>
-            <p><strong>تحصیلات:</strong> فوق لیسانس حقوق جزا</p>
-            <p><strong>سابقه:</strong> بیش از ۸ سال وکالت</p>
-        `
+        details: [
+            ["سمت", "وکیل شرکت"],
+            ["تحصیلات", "فوق لیسانس حقوق جزا"],
+            ["سابقه", "بیش از ۸ سال وکالت"]
+        ]
     }
-
 };
 
-
 function openLawyer(id) {
-
     const lawyer = lawyers[id];
 
-    if (!lawyer) {
-        return;
-    }
+    if (!lawyer) return;
 
     document.getElementById("modalPhoto").src = lawyer.image;
     document.getElementById("modalPhoto").alt = lawyer.name;
+    document.getElementById("modalName").textContent = lawyer.name;
 
-    document.getElementById("modalName").textContent =
-        lawyer.name;
+    const detailsBox = document.getElementById("modalDetails");
+    detailsBox.replaceChildren();
 
-    document.getElementById("modalDetails").innerHTML =
-        lawyer.details;
+    lawyer.details.forEach(function(item) {
+        const paragraph = document.createElement("p");
+        const label = document.createElement("strong");
 
-    const modal = document.getElementById("lawyerModal");
+        label.textContent = item[0] + ": ";
+        paragraph.appendChild(label);
+        paragraph.appendChild(document.createTextNode(item[1]));
+        detailsBox.appendChild(paragraph);
+    });
 
-    modal.classList.add("show");
-
+    document.getElementById("lawyerModal").classList.add("show");
     document.body.style.overflow = "hidden";
 }
 
-
 function closeLawyer() {
-
     document.getElementById("lawyerModal").classList.remove("show");
-
     document.body.style.overflow = "";
 }
 
-
 function closeOutside(event) {
-
     if (event.target.id === "lawyerModal") {
         closeLawyer();
     }
-
 }
 
-
 document.addEventListener("keydown", function(event) {
-
     if (event.key === "Escape") {
         closeLawyer();
     }
-
 });
 
+/* =========================
+   COPY CONTACT DETAILS
+========================= */
 
-function copyText(text, button) {
+async function copyText(text, button) {
+    const oldText = button.textContent;
 
-    navigator.clipboard.writeText(text).then(function() {
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+        } else {
+            const temp = document.createElement("textarea");
+            temp.value = text;
+            temp.style.position = "fixed";
+            temp.style.opacity = "0";
 
-        const oldText = button.textContent;
+            document.body.appendChild(temp);
+            temp.focus();
+            temp.select();
 
-        button.textContent = "کپی شد ✓";
+            const copied = document.execCommand("copy");
+            temp.remove();
 
-        setTimeout(function() {
-            button.textContent = oldText;
-        }, 1500);
-
-    }).catch(function() {
-
-        const temp = document.createElement("textarea");
-
-        temp.value = text;
-
-        document.body.appendChild(temp);
-
-        temp.select();
-
-        document.execCommand("copy");
-
-        document.body.removeChild(temp);
-
-        const oldText = button.textContent;
+            if (!copied) throw new Error("Copy failed");
+        }
 
         button.textContent = "کپی شد ✓";
+    } catch (error) {
+        button.textContent = "کپی نشد";
+    }
 
-        setTimeout(function() {
-            button.textContent = oldText;
-        }, 1500);
-
-    });
-
+    setTimeout(function() {
+        button.textContent = oldText;
+    }, 1800);
 }
-
 
 /* =========================
    CONSULTATION FORM
 ========================= */
 
-const consultationForm =
-    document.getElementById("consultationForm");
+const consultationForm = document.getElementById("consultationForm");
+const consultationFrame = document.getElementById("telegramFrame");
+const formStatus = document.getElementById("formStatus");
+const submitConsultation = document.getElementById("submitConsultation");
 
-const telegramFrame =
-    document.getElementById("telegramFrame");
+let consultationSubmitted = false;
 
-const formStatus =
-    document.getElementById("formStatus");
-
-const submitConsultation =
-    document.getElementById("submitConsultation");
-
-let formSubmitted = false;
-
-
-consultationForm.addEventListener("submit", function() {
-
-    formSubmitted = true;
-
-    submitConsultation.disabled = true;
-
-    submitConsultation.textContent =
-        "در حال ارسال...";
-
-    formStatus.className =
-        "form-status";
-
-    formStatus.style.display =
-        "none";
-
-});
-
-
-telegramFrame.addEventListener("load", function() {
-
-    if (!formSubmitted) {
+consultationForm.addEventListener("submit", function(event) {
+    if (!consultationForm.reportValidity()) {
+        event.preventDefault();
         return;
     }
 
-    formSubmitted = false;
+    consultationSubmitted = true;
+    submitConsultation.disabled = true;
+    submitConsultation.textContent = "در حال ارسال...";
 
+    formStatus.className = "form-status";
+    formStatus.textContent = "";
+    formStatus.style.display = "none";
+});
+
+consultationFrame.addEventListener("load", function() {
+    if (!consultationSubmitted) return;
+
+    consultationSubmitted = false;
     submitConsultation.disabled = false;
+    submitConsultation.textContent = "ارسال درخواست مشاوره";
 
-    submitConsultation.textContent =
-        "ارسال درخواست مشاوره";
-
-    formStatus.className =
-        "form-status success";
-
+    formStatus.className = "form-status success";
     formStatus.textContent =
-        "درخواست شما با موفقیت ارسال شد ✓";
-
-    formStatus.style.display =
-        "block";
+        "فرم ارسال شد. اگر پیام تأیید دریافت نکردید، لطفاً ارسال درخواست را در تلگرام یا با شرکت پیگیری کنید.";
+    formStatus.style.display = "block";
 
     consultationForm.reset();
 
     setTimeout(function() {
-
-        formStatus.style.display =
-            "none";
-
-    }, 6000);
-
+        formStatus.style.display = "none";
+    }, 9000);
 });
 
+/* =========================
+   QUESTIONS AND ANSWERS
+========================= */
+
+const qaForm = document.getElementById("qaForm");
+const qaFrame = document.getElementById("qaFrame");
+const qaFormStatus = document.getElementById("qaFormStatus");
+const submitQuestion = document.getElementById("submitQuestion");
+const qaList = document.getElementById("qaList");
+const refreshQA = document.getElementById("refreshQA");
+
+let qaSubmitted = false;
+let qaLoading = false;
+
+function showQAFormStatus(message, type) {
+    qaFormStatus.className = "form-status " + type;
+    qaFormStatus.textContent = message;
+    qaFormStatus.style.display = "block";
+}
+
+qaForm.addEventListener("submit", function(event) {
+    if (!qaForm.reportValidity()) {
+        event.preventDefault();
+        return;
+    }
+
+    qaSubmitted = true;
+    submitQuestion.disabled = true;
+    submitQuestion.textContent = "در حال ارسال پرسش...";
+
+    qaFormStatus.className = "form-status";
+    qaFormStatus.textContent = "";
+    qaFormStatus.style.display = "none";
+});
+
+qaFrame.addEventListener("load", function() {
+    if (!qaSubmitted) return;
+
+    qaSubmitted = false;
+    submitQuestion.disabled = false;
+    submitQuestion.textContent = "ارسال پرسش";
+
+    showQAFormStatus(
+        "فرم ارسال شد. پرسش پس از بررسی و تأیید شرکت در بخش عمومی نمایش داده می‌شود.",
+        "success"
+    );
+
+    qaForm.reset();
+
+    setTimeout(function() {
+        qaFormStatus.style.display = "none";
+    }, 9000);
+});
+
+/*
+ * پرسش‌ها از Apps Script خوانده می‌شوند.
+ * فقط پرسش‌هایی نمایش داده می‌شوند که سرور آن‌ها را منتشر کرده باشد.
+ * نام و شماره تماس کاربران در این بخش نمایش داده نمی‌شوند.
+ */
+
+function createQANode(tag, className, text) {
+    const node = document.createElement(tag);
+
+    if (className) {
+        node.className = className;
+    }
+
+    if (text !== undefined && text !== null) {
+        node.textContent = String(text);
+    }
+
+    return node;
+}
+
+function formatQADate(value) {
+    if (!value) return "";
+
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+        return String(value);
+    }
+
+    try {
+        return new Intl.DateTimeFormat("fa-AF", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }).format(date);
+    } catch (error) {
+        return date.toLocaleDateString();
+    }
+}
+
+function renderQA(items) {
+    qaList.replaceChildren();
+
+    if (!Array.isArray(items) || items.length === 0) {
+        qaList.appendChild(
+            createQANode(
+                "div",
+                "qa-empty",
+                "هنوز پرسش و پاسخ منتشرشده‌ای وجود ندارد. می‌توانید نخستین پرسش خود را ارسال کنید."
+            )
+        );
+        return;
+    }
+
+    items.forEach(function(item) {
+        if (!item || !item.question || !item.answer) return;
+
+        const card = createQANode("article", "qa-card");
+
+        if (item.category) {
+            card.appendChild(
+                createQANode("span", "qa-card-category", item.category)
+            );
+        }
+
+        card.appendChild(
+            createQANode("h3", "qa-card-question-title", "پرسش:")
+        );
+
+        card.appendChild(
+            createQANode("p", "qa-card-question", item.question)
+        );
+
+        const answerBox = createQANode("div", "qa-card-answer-box");
+
+        answerBox.appendChild(
+            createQANode("h4", "qa-card-answer-title", "پاسخ شرکت عمّار:")
+        );
+
+        answerBox.appendChild(
+            createQANode("p", "qa-card-answer", item.answer)
+        );
+
+        card.appendChild(answerBox);
+
+        const dateText = formatQADate(item.date || item.createdAt);
+
+        if (dateText) {
+            card.appendChild(
+                createQANode("div", "qa-card-date", "تاریخ انتشار: " + dateText)
+            );
+        }
+
+        qaList.appendChild(card);
+    });
+
+    if (!qaList.children.length) {
+        qaList.appendChild(
+            createQANode("div", "qa-empty", "در حال حاضر پرسش و پاسخ منتشرشده‌ای وجود ندارد.")
+        );
+    }
+}
+
+async function loadQA() {
+    if (qaLoading) return;
+
+    qaLoading = true;
+    refreshQA.disabled = true;
+    refreshQA.textContent = "در حال دریافت...";
+
+    qaList.replaceChildren(
+        createQANode("div", "qa-loading", "در حال دریافت پرسش‌ها و پاسخ‌ها...")
+    );
+
+    try {
+        const separator = SCRIPT_URL.includes("?") ? "&" : "?";
+        const url = SCRIPT_URL + separator +
+            "action=list&t=" + Date.now();
+
+        const response = await fetch(url, {
+            method: "GET",
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error("HTTP " + response.status);
+        }
+
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+            renderQA(data);
+        } else if (data && Array.isArray(data.questions)) {
+            renderQA(data.questions);
+        } else if (data && data.success === false) {
+            throw new Error(data.message || "دریافت اطلاعات ناموفق بود.");
+        } else {
+            throw new Error("ساختار پاسخ سرور معتبر نیست.");
+        }
+    } catch (error) {
+        qaList.replaceChildren();
+
+        qaList.appendChild(
+            createQANode(
+                "div",
+                "qa-error",
+                "دریافت پرسش‌ها ممکن نشد. اتصال اینترنت و تنظیمات Google Apps Script را بررسی کنید و دوباره تلاش نمایید."
+            )
+        );
+
+        console.error("Q&A loading error:", error);
+    } finally {
+        qaLoading = false;
+        refreshQA.disabled = false;
+        refreshQA.textContent = "تازه‌سازی پرسش‌ها";
+    }
+}
+
+refreshQA.addEventListener("click", loadQA);
+
+/* بارگذاری اولیه پرسش‌ها */
+loadQA();
 </script>
 
 </body>
 </html>
+```
